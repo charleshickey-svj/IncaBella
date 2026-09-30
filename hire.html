@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hire Collection · Inca Bella</title>
+<meta name="description" content="Hire lanterns, fairy lights, props, garden games and decoration packages for your wedding at Sopley Mill.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Gilda+Display&family=Mrs+Saint+Delafield&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="hire">
+<div data-site-header></div>
+
+<main>
+  <section class="page-hero">
+    <img src="assets/img/site/long-table.jpg" alt="Long banqueting tables dressed with greenery and candles at Sopley Mill">
+    <div class="wrap inner">
+      <p class="script">The hire collection</p>
+      <h1>Everything to style your day</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="lede">Add anything you like to your list, then send it to Lucy. She'll confirm what's available for your date and send you a quote. Prices are per item unless the description says otherwise.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Show a category" data-filters></div>
+      <div data-groups></div>
+    </div>
+  </section>
+</main>
+
+<div data-site-footer></div>
+<script src="js/products.js"></script>
+<script src="js/site.js"></script>
+<script>
+  (function () {
+    var groups = window.INCABELLA_GROUPS;
+    var filters = document.querySelector("[data-filters]");
+    var holder = document.querySelector("[data-groups]");
+
+    filters.innerHTML = '<button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>' +
+      groups.map(function (g) { return '<button class="chip" type="button" data-filter="' + g.id + '" aria-pressed="false">' + g.name + "</button>"; }).join("");
+
+    holder.innerHTML = groups.map(function (g) {
+      var items = IB.products().filter(function (p) { return p.group === g.id; });
+      return '<section class="group" id="' + g.id + '" data-group="' + g.id + '">' +
+        '<div class="group-head reveal"><h2>' + g.name + "</h2><p>" + g.blurb + "</p></div>" +
+        '<div class="grid' + (g.id === "packages" ? " grid--packages" : "") + '">' +
+        items.map(function (p) {
+          return '<article class="card reveal"><a class="card-link" href="product.html#' + p.slug + '">' +
+            '<div class="ph"><img src="' + IB.img(p) + '" alt="' + IB.esc(p.name) + '" loading="lazy"></div>' +
+            "<h3>" + IB.esc(p.name) + "</h3></a>" +
+            '<p class="price">' + (g.id === "packages" ? "From " : "") + IB.money(p.price) + "</p>" +
+            '<button class="add-btn" type="button" data-add="' + p.slug + '">Add to my list</button></article>';
+        }).join("") + "</div></section>";
+    }).join("");
+
+    function show(id) {
+      filters.querySelectorAll(".chip").forEach(function (c) { c.setAttribute("aria-pressed", c.dataset.filter === id); });
+      holder.querySelectorAll("[data-group]").forEach(function (s) { s.hidden = id !== "all" && s.dataset.group !== id; });
+      holder.querySelectorAll(".fade").forEach(function (el) { el.classList.add("is-in"); });
+    }
+    filters.addEventListener("click", function (e) {
+      var chip = e.target.closest("[data-filter]");
+      if (chip) show(chip.dataset.filter);
+    });
+    var start = location.hash.slice(1);
+    if (groups.some(function (g) { return g.id === start; })) show(start);
+  })();
+</script>
+</body>
+</html>

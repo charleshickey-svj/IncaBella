@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<title>Contact · Inca Bella</title>
+<meta name="description" content="Contact Lucy at Inca Bella about wedding flowers and hire at Sopley Mill.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Gilda+Display&family=Mrs+Saint+Delafield&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+<div data-site-header></div>
+
+<main>
+  <header class="plain-head wrap">
+    <h1>Contact us</h1>
+    <hr class="rule">
+    <div class="btn-row">
+      <a class="btn btn--olive" href="hire.html">Browse hire</a>
+      <a class="btn" href="list.html">Send my list</a>
+      <a class="btn" href="#flowers" data-topic="Flowers">Ask about flowers</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap" style="display:grid;gap:clamp(56px,7vw,96px)">
+      <div class="narrow" style="margin-inline:auto;width:100%;display:grid;gap:28px" id="flowers">
+        <p class="lede reveal" style="text-align:center;margin-inline:auto">Ask Lucy anything about flowers or hire, or check availability for your date. You're welcome to see any of the hire items at Sopley Mill before you commit, by arrangement.</p>
+        <form class="form-card reveal" id="contact-form" novalidate>
+          <div class="fields">
+            <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="c-phone">Phone</label><input id="c-phone" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="c-date">Wedding date</label><input id="c-date" name="date" type="date"><span class="hint">If you know it</span></div>
+            <div class="field field--full"><label for="c-topic">What's it about?</label>
+              <select id="c-topic" name="topic"><option>Hire items</option><option>Flowers</option><option>A decoration package</option><option>Visiting to see the hire items</option><option>Something else</option></select></div>
+            <div class="field field--full"><label for="c-message">Message</label><textarea id="c-message" name="message" required></textarea></div>
+          </div>
+          <p class="error-msg" data-error hidden></p>
+          <button class="btn btn--olive" type="submit">Send message</button>
+        </form>
+        <div class="success" data-success hidden tabindex="-1"></div>
+      </div>
+
+      <div class="info-row reveal">
+        <div><h3>Address</h3><address>Sopley Mill, Mill Lane,<br>Nr Christchurch,<br>Dorset, BH23 7AU</address></div>
+        <div><h3>Contact</h3><p><a href="mailto:Lucy@incabella.co.uk">Lucy@incabella.co.uk</a><br><a href="tel:+447946471707">07946 471707</a></p></div>
+        <div><h3>Visits</h3><p>See the hire collection at Sopley Mill by appointment.</p></div>
+        <div><h3>Sister venue</h3><p><a href="https://sopleymill.co.uk/" target="_blank" rel="noopener">sopleymill.co.uk</a></p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-site-footer></div>
+<script src="js/products.js"></script>
+<script src="js/site.js"></script>
+<script>
+  (function () {
+    var form = document.getElementById("contact-form");
+    var error = document.querySelector("[data-error]");
+    var success = document.querySelector("[data-success]");
+    function pickTopic() { if (location.hash === "#flowers") form.topic.value = "Flowers"; }
+    pickTopic();
+    window.addEventListener("hashchange", pickTopic);
+    document.querySelector("[data-topic]").addEventListener("click", function () { form.topic.value = "Flowers"; });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      form.querySelectorAll("[aria-invalid]").forEach(function (f) { f.removeAttribute("aria-invalid"); });
+      var missing = [].slice.call(form.querySelectorAll("[required]")).filter(function (f) { return !f.value.trim() || !f.checkValidity(); });
+      if (missing.length) {
+        missing.forEach(function (f) { f.setAttribute("aria-invalid", "true"); });
+        error.textContent = "Please fill in " + missing.map(function (f) { return form.querySelector('label[for="' + f.id + '"]').textContent.toLowerCase(); }).join(", ") + ".";
+        error.hidden = false; missing[0].focus(); return;
+      }
+      error.hidden = true;
+      success.innerHTML = '<p class="script" style="font-size:3.2rem">Thank you</p><h2>Message sent</h2>' +
+        "<p>Lucy will reply to " + IB.esc(form.email.value) + " as soon as she can, usually within two working days.</p>" +
+        '<p class="demo-flag">Demo preview: in the finished site this message is emailed to ' + IB.contact.email + ".</p>";
+      form.hidden = true; success.hidden = false; success.focus();
+    });
+  })();
+</script>
+</body>
+</html>

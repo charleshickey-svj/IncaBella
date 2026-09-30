@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>My List · Inca Bella</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Gilda+Display&family=Mrs+Saint+Delafield&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="list">
+<div data-site-header></div>
+
+<main>
+  <header class="plain-head wrap">
+    <p class="script">Your wedding list</p>
+    <h1 class="visually-hidden">My list</h1>
+    <hr class="rule">
+    <p class="lede" style="margin-inline:auto">Check your items, then send your list to Lucy. She'll confirm what's available for your date and reply with a quote. You don't pay anything yet.</p>
+  </header>
+
+  <section class="section" style="padding-top:clamp(48px,6vw,80px)">
+    <div class="wrap list-layout">
+      <div data-list></div>
+
+      <div>
+        <form class="form-card" id="request-form" novalidate>
+          <h2>Send your list to Lucy</h2>
+          <div class="fields">
+            <div class="field field--full"><label for="f-names">Your names</label><input id="f-names" name="names" autocomplete="name" required placeholder="e.g. Amy &amp; David"></div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="field"><label for="f-date">Wedding date</label><input id="f-date" name="date" type="date" required></div>
+            <div class="field"><label for="f-guests">Number of guests</label><input id="f-guests" name="guests" type="number" inputmode="numeric" min="1" placeholder="e.g. 90"></div>
+            <div class="field field--full"><span class="label">Venue</span><div class="static">Sopley Mill, Christchurch</div></div>
+            <div class="field field--full field--check"><input id="f-flowers" name="flowers" type="checkbox"><label for="f-flowers">I'd also like to talk to Lucy about flowers</label></div>
+            <div class="field field--full"><label for="f-notes">Anything else Lucy should know?</label><textarea id="f-notes" name="notes" placeholder="Colours, themes, timings, or questions about any item"></textarea></div>
+          </div>
+          <p class="error-msg" data-error hidden></p>
+          <button class="btn btn--olive" type="submit">Send my list</button>
+        </form>
+        <div class="success" data-success hidden tabindex="-1"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-site-footer></div>
+<script src="js/products.js"></script>
+<script src="js/site.js"></script>
+<script>
+  (function () {
+    var listBox = document.querySelector("[data-list]");
+    var form = document.getElementById("request-form");
+    var success = document.querySelector("[data-success]");
+    var error = document.querySelector("[data-error]");
+
+    function lines() {
+      var items = IB.List.items();
+      return Object.keys(items).map(function (slug) { return { p: IB.product(slug), qty: items[slug] }; })
+        .filter(function (l) { return l.p; });
+    }
+    function total(ls) { return ls.reduce(function (t, l) { return t + l.p.price * l.qty; }, 0); }
+
+    function render() {
+      var ls = lines();
+      if (!ls.length) {
+        listBox.innerHTML = '<div class="empty"><p class="script" style="font-size:3.2rem">Nothing here yet</p>' +
+          "<p>Browse the hire collection and tap “Add to my list” on anything you'd like for your day.</p>" +
+          '<div class="btn-row"><a class="btn btn--olive" href="hire.html">Browse the hire collection</a><a class="btn" href="flowers.html">Flowers</a></div></div>';
+        return;
+      }
+      listBox.innerHTML = '<ul class="list-items">' + ls.map(function (l) {
+        var p = l.p;
+        return '<li class="list-item"><a href="product.html#' + p.slug + '"><img src="' + IB.img(p) + '" alt=""></a>' +
+          '<div><h3><a href="product.html#' + p.slug + '">' + IB.esc(p.name) + "</a></h3>" +
+          '<div class="meta"><span>' + IB.money(p.price) + " each</span>" +
+          '<span class="qty"><button type="button" data-dec="' + p.slug + '" aria-label="One fewer ' + IB.esc(p.name) + '">−</button>' +
+          '<input type="number" inputmode="numeric" min="1" value="' + l.qty + '" data-qty="' + p.slug + '" aria-label="Quantity of ' + IB.esc(p.name) + '">' +
+          '<button type="button" data-inc="' + p.slug + '" aria-label="One more ' + IB.esc(p.name) + '">+</button></span>' +
+          '<button class="remove" type="button" data-remove="' + p.slug + '">Remove</button></div></div>' +
+          '<span class="line-total">' + IB.money(p.price * l.qty) + "</span></li>";
+      }).join("") + "</ul>" +
+        '<div class="list-total"><span class="kicker">Estimated total</span><strong>' + IB.money(total(ls)) + "</strong></div>" +
+        "<p>Lucy will confirm your final price. Packages are priced “from” and depend on your plans.</p>" +
+        '<p style="margin-top:24px"><a class="text-link" href="hire.html">Add more items</a></p>';
+    }
+
+    listBox.addEventListener("click", function (e) {
+      var t = e.target.closest("button");
+      if (!t) return;
+      if (t.dataset.inc) IB.List.add(t.dataset.inc, 1);
+      if (t.dataset.dec) IB.List.set(t.dataset.dec, Math.max(1, IB.List.qty(t.dataset.dec) - 1));
+      if (t.dataset.remove) IB.List.set(t.dataset.remove, 0);
+    });
+    listBox.addEventListener("change", function (e) {
+      if (e.target.dataset.qty) IB.List.set(e.target.dataset.qty, Math.max(1, parseInt(e.target.value, 10) || 1));
+    });
+    document.addEventListener("listchange", render);
+    render();
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var ls = lines();
+      var missing = [].slice.call(form.querySelectorAll("[required]")).filter(function (f) { return !f.value.trim() || !f.checkValidity(); });
+      form.querySelectorAll("[aria-invalid]").forEach(function (f) { f.removeAttribute("aria-invalid"); });
+      if (!ls.length && !form.flowers.checked) {
+        error.textContent = "Your list is empty. Add some items from the hire collection, or tick the flowers box, before sending.";
+        error.hidden = false; return;
+      }
+      if (missing.length) {
+        missing.forEach(function (f) { f.setAttribute("aria-invalid", "true"); });
+        error.textContent = "Please fill in " + missing.map(function (f) { return form.querySelector('label[for="' + f.id + '"]').textContent.toLowerCase(); }).join(", ") + ".";
+        error.hidden = false; missing[0].focus(); return;
+      }
+      error.hidden = true;
+      var date = new Date(form.date.value + "T12:00:00").toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+      success.innerHTML = '<p class="script" style="font-size:3.2rem">Thank you</p>' +
+        "<h2>Lucy has your list</h2>" +
+        "<p>She'll check availability for " + IB.esc(date) + " and reply to " + IB.esc(form.email.value) + " within two working days.</p>" +
+        "<ul>" + ls.map(function (l) { return "<li>" + l.qty + " × " + IB.esc(l.p.name) + "</li>"; }).join("") +
+        (form.flowers.checked ? "<li>A chat about flowers</li>" : "") + "</ul>" +
+        '<p class="demo-flag">Demo preview: in the finished site this request is emailed to ' + IB.contact.email + ".</p>" +
+        '<p><button class="btn btn--small" type="button" data-new>Start a new list</button></p>';
+      form.hidden = true; success.hidden = false; success.focus();
+    });
+    success.addEventListener("click", function (e) {
+      if (!e.target.closest("[data-new]")) return;
+      IB.List.clear(); form.reset(); form.hidden = false; success.hidden = true;
+    });
+  })();
+</script>
+</body>
+</html>
