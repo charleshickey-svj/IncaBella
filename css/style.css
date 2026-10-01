@@ -243,6 +243,7 @@ p { margin: 0; }
 .split--flip .split-media { order: 2; }
 .split-media { position: relative; }
 .split-media img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.split-media--wide img:first-child { aspect-ratio: 4 / 3; }
 .split-media .inset { position: absolute; width: 42%; right: -6%; bottom: -8%; aspect-ratio: 1; border: 10px solid var(--paper); }
 .split--flip .split-media .inset { right: auto; left: -6%; }
 .split-copy { display: grid; gap: 22px; min-width: 0; }

@@ -49,6 +49,7 @@ SITE = {
     "centrepiece": "_site/IMG_7095.jpeg",
     "firepit-night": "_site/IMG_1713.jpg",
     "mill-lawn": "_site/giant-outdoor-chess.jpg",
+    "potted-aisle": "extra/potted-aisle.webp",
     "logo": "_site/IncaBella_logo_02.png",
 }
 
