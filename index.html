@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Inca Bella</title>
+<title>IncaBella</title>
 <meta name="description" content="Wedding flowers and hire at Sopley Mill. Lanterns, fairy lights, props, garden games and home-grown flowers, set up by Lucy before you arrive.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,13 @@
 
 <main>
   <section class="hero">
-    <img src="assets/img/site/hero.jpg" alt="Jugs of home-grown wildflowers along a rustic wedding table" fetchpriority="high">
+    <div class="slides" data-slides>
+      <img src="assets/img/site/hero.jpg" alt="Jugs of home-grown wildflowers along a rustic wedding table" fetchpriority="high">
+      <img src="assets/img/site/ceremony.jpg" alt="The ceremony room at Sopley Mill dressed with lanterns and olive trees" loading="lazy">
+      <img src="assets/img/site/long-table.jpg" alt="Long tables dressed with greenery garlands and candles" loading="lazy">
+      <img src="assets/img/site/chess.jpg" alt="Giant chess and deckchairs on the lawn" loading="lazy">
+    </div>
+    <div class="slide-dots" data-dots></div>
     <div class="wrap hero-copy">
       <h1><span class="script">Flowers &amp; finishing touches</span><span class="hero-line">for your day at Sopley Mill</span></h1>
     </div>
@@ -28,7 +34,7 @@
         <p class="script">A little bit about us…</p>
         <p class="kicker">Sopley Mill's own florist &amp; wedding hire</p>
       </div>
-      <div class="features reveal">
+      <div class="features reveal stagger">
         <div class="feature">
           <svg viewBox="0 0 72 72" fill="none" stroke="#b5854b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M36 64V34"/><path d="M36 50c-8 0-14-6-15-13 8 0 14 5 15 13Z"/><path d="M36 44c7 0 12-5 13-11-7 0-12 4-13 11Z"/><path d="M36 34c-7 0-11-6-11-13 3 2 6 2 8-1 1 3 2 4 3 4s2-1 3-4c2 3 5 3 8 1 0 7-4 13-11 13Z"/></svg>
           <h3>Home-grown flowers</h3>
@@ -90,8 +96,35 @@
         <h2 style="font-size:var(--step-3)">Decoration packages</h2>
         <p class="lede">Take the stress out of doing it yourself. Lucy styles the rooms, the ceremony and your tables, using everything in the collection.</p>
       </div>
-      <div class="packages reveal" data-featured="full-decoration-package-silver,ground-floor-decoration-package,outdoor-ceremony-set-up"></div>
+      <div class="packages reveal stagger" data-featured="full-decoration-package-silver,ground-floor-decoration-package,outdoor-ceremony-set-up"></div>
       <p class="btn-row reveal" style="margin-top:56px"><a class="btn" href="hire.html#packages">See all packages</a></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="script">Kind words</p>
+        <p class="kicker">From couples married at Sopley Mill</p>
+      </div>
+      <div class="reviews reveal stagger">
+        <figure class="review">
+          <span class="stars" aria-label="5 out of 5">★★★★★</span>
+          <blockquote>Lucy made the Mill look magical. We walked in and everything was exactly as we'd imagined, only better.</blockquote>
+          <figcaption><cite>Sophie &amp; Tom · June 2025</cite></figcaption>
+        </figure>
+        <figure class="review">
+          <span class="stars" aria-label="5 out of 5">★★★★★</span>
+          <blockquote>The garden games kept everyone happy all afternoon, and the firepit was the heart of the evening.</blockquote>
+          <figcaption><cite>Hannah &amp; James · August 2025</cite></figcaption>
+        </figure>
+        <figure class="review">
+          <span class="stars" aria-label="5 out of 5">★★★★★</span>
+          <blockquote>Our flowers smelled incredible. Knowing some were grown just down the road made them extra special.</blockquote>
+          <figcaption><cite>Ellie &amp; Sam · May 2025</cite></figcaption>
+        </figure>
+      </div>
+      <p class="sample-note reveal">Sample reviews for this preview. They'll be replaced with real reviews before the site goes live.</p>
     </div>
   </section>
 
@@ -101,7 +134,7 @@
         <p class="script">How it works</p>
         <p class="kicker">From your list to your wedding day</p>
       </div>
-      <ol class="steps reveal">
+      <ol class="steps reveal stagger">
         <li><h3>Build your list</h3><p>Browse flowers and hire items, and tap “Add to my list” on anything you like.</p></li>
         <li><h3>Send it to Lucy</h3><p>Add your wedding date and guest numbers and send your list. There's nothing to pay yet.</p></li>
         <li><h3>Get your quote</h3><p>Lucy checks availability for your date and replies with a quote and any ideas.</p></li>
@@ -111,10 +144,10 @@
   </section>
 
   <section class="sister">
-    <img src="assets/img/site/tent.jpg" alt="" loading="lazy">
+    <img src="assets/img/site/river-window.jpg" alt="" loading="lazy">
     <div class="wrap inner reveal">
       <p class="script">Getting married at Sopley Mill?</p>
-      <p>Inca Bella is Sopley Mill's sister company. Lucy knows every room, window and corner of the Mill, and you're welcome to see the hire collection there by arrangement.</p>
+      <p>IncaBella is Sopley Mill's sister company. Lucy knows every room, window and corner of the Mill, and you're welcome to see the hire collection there by arrangement.</p>
       <div class="btn-row">
         <a class="btn" href="contact.html">Arrange a visit</a>
         <a class="btn" href="https://sopleymill.co.uk/" target="_blank" rel="noopener">Visit Sopley Mill</a>
@@ -132,8 +165,34 @@
     box.innerHTML = box.dataset.featured.split(",").map(function (slug) {
       var p = IB.product(slug);
       return '<a class="package" href="product.html#' + p.slug + '"><div class="ph"><img src="' + IB.img(p) + '" alt="" loading="lazy"></div>' +
-        '<h3>' + IB.esc(p.name) + '</h3><p class="price">From ' + IB.money(p.price) + '</p></a>';
+        '<h3>' + IB.esc(p.name) + '</h3><p class="price">' + IB.priceLabel(p) + '</p></a>';
     }).join("");
+  })();
+
+  // Hero: slow crossfade between photos (paused for reduced motion or a hidden tab).
+  (function () {
+    var box = document.querySelector("[data-slides]"), dots = document.querySelector("[data-dots]");
+    var slides = [].slice.call(box.children), current = 0, timer;
+    slides[0].classList.add("is-active");
+    dots.innerHTML = slides.map(function (s, i) {
+      return '<button type="button" aria-label="Show photo ' + (i + 1) + '"' + (i ? "" : ' aria-current="true"') + "></button>";
+    }).join("");
+    function show(i) {
+      slides[current].classList.remove("is-active");
+      dots.children[current].removeAttribute("aria-current");
+      current = (i + slides.length) % slides.length;
+      box.classList.add("is-running");
+      slides[current].loading = "eager";
+      slides[current].classList.add("is-active");
+      dots.children[current].setAttribute("aria-current", "true");
+    }
+    function play() { clearInterval(timer); timer = setInterval(function () { if (!document.hidden) show(current + 1); }, 6500); }
+    dots.addEventListener("click", function (e) {
+      var b = e.target.closest("button"); if (!b) return;
+      show([].indexOf.call(dots.children, b)); play();
+    });
+    slides.slice(1).forEach(function (s) { s.loading = "eager"; });
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) play();
   })();
 </script>
 </body>

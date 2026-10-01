@@ -1,4 +1,4 @@
-/* Inca Bella: shared header, footer, "My list" and page effects. */
+/* IncaBella: shared header, footer, "My list" and page effects. */
 (function () {
   "use strict";
 
@@ -7,8 +7,21 @@
     phone: "07946 471707",
     phoneHref: "+447946471707",
     address: ["Sopley Mill, Mill Lane", "Nr Christchurch", "Dorset, BH23 7AU"],
-    sopley: "https://sopleymill.co.uk/"
+    sopley: "https://sopleymill.co.uk/",
+    instagram: "https://www.instagram.com/incabella_/",
+    facebook: "https://www.facebook.com/incabellaweddinghire/",
+    directions: "https://www.google.com/maps/dir/?api=1&destination=Sopley+Mill%2C+Mill+Lane%2C+Sopley%2C+Christchurch+BH23+7AU"
   };
+
+  var SOCIAL_ICONS = {
+    instagram: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>',
+    facebook: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z" fill="currentColor"/></svg>'
+  };
+  function socialLinks() {
+    return '<div class="social">' +
+      '<a href="' + CONTACT.instagram + '" target="_blank" rel="noopener" aria-label="IncaBella on Instagram">' + SOCIAL_ICONS.instagram + "</a>" +
+      '<a href="' + CONTACT.facebook + '" target="_blank" rel="noopener" aria-label="IncaBella on Facebook">' + SOCIAL_ICONS.facebook + "</a></div>";
+  }
 
   var NAV = [
     { href: "index.html", label: "Home", page: "home" },
@@ -65,6 +78,9 @@
   function money(n) {
     return "£" + n.toLocaleString("en-GB", { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 });
   }
+  function priceLabel(p) {
+    return (p.from ? "From " : "") + money(p.price) + (p.unit ? ' <span class="unit">' + p.unit + "</span>" : "");
+  }
   function img(p, i) { return "assets/img/products/" + p.images[i || 0]; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
 
@@ -85,7 +101,7 @@
     el.outerHTML =
       '<div class="topbar"></div>' +
       '<header class="site-header"><div class="header-inner">' +
-      '<a class="brand" href="index.html" aria-label="Inca Bella home">' + logoMark("bloom") +
+      '<a class="brand" href="index.html" aria-label="IncaBella home">' + logoMark("bloom") +
       '<span class="brand-text"><span class="brand-name">IncaBella</span><span class="brand-sub">Floristry &amp; Wedding Hire</span></span></a>' +
       '<nav class="nav" id="site-nav" aria-label="Main"><ul class="nav-links">' + links + "</ul>" + listButton(false) + "</nav>" +
       '<div class="header-actions">' + listButton(true) +
@@ -111,13 +127,13 @@
     if (!el) return;
     el.outerHTML =
       '<footer class="site-footer"><div class="wrap"><div class="footer-top">' +
-      '<div class="footer-brand"><a class="brand" href="index.html" aria-label="Inca Bella home">' + logoMark("") +
+      '<div class="footer-brand"><a class="brand" href="index.html" aria-label="IncaBella home">' + logoMark("") +
       '<span class="brand-text"><span class="brand-name">IncaBella</span><span class="brand-sub">Floristry &amp; Wedding Hire</span></span></a>' +
-      "<p>Flowers, lanterns and finishing touches for weddings at Sopley Mill, set up by Lucy before you arrive.</p></div>" +
+      "<p>Flowers, lanterns and finishing touches for weddings at Sopley Mill, set up by Lucy before you arrive.</p>" + socialLinks() + "</div>" +
       "<div><h3>Address</h3><address>" + CONTACT.address.join("<br>") + "</address></div>" +
       '<div><h3>Contact</h3><ul><li><a href="mailto:' + CONTACT.email + '">' + CONTACT.email + '</a></li><li><a href="tel:' + CONTACT.phoneHref + '">' + CONTACT.phone + "</a></li></ul></div>" +
       '<div><h3>Explore</h3><ul><li><a href="hire.html">Hire collection</a></li><li><a href="flowers.html">Flowers</a></li><li><a href="list.html">My list</a></li><li><a href="' + CONTACT.sopley + '" target="_blank" rel="noopener">Sopley Mill</a></li></ul></div>' +
-      '</div><div class="footer-bottom"><span>© ' + new Date().getFullYear() + ' Incabella Floristry &amp; Wedding Hire</span><span>Sister company to Sopley Mill</span></div></div></footer>';
+      '</div><div class="footer-bottom"><span>© ' + new Date().getFullYear() + ' IncaBella Floristry &amp; Wedding Hire</span><span>Sister company to Sopley Mill</span></div></div></footer>';
   }
 
   function refreshCounts() {
@@ -142,22 +158,82 @@
     if (!btn) return;
     e.preventDefault();
     var qtyInput = btn.dataset.qtyFrom && document.querySelector(btn.dataset.qtyFrom);
-    List.add(btn.dataset.add, qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1);
+    var n = qtyInput ? parseInt(qtyInput.value, 10) || 1 : 1;
+    List.add(btn.dataset.add, n);
+    showToast(btn.dataset.add, n);
   });
+
+  /* ---------- "Added to your list" panel ---------- */
+  var toast, toastTimer;
+  function showToast(slug, n) {
+    var p = product(slug);
+    if (!p) return;
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.className = "toast";
+      toast.setAttribute("role", "status");
+      document.body.appendChild(toast);
+      toast.addEventListener("click", function (e) { if (e.target.closest(".toast-close")) hideToast(); });
+      toast.addEventListener("mouseenter", function () { clearTimeout(toastTimer); });
+      toast.addEventListener("mouseleave", function () { toastTimer = setTimeout(hideToast, 2500); });
+    }
+    toast.innerHTML = '<img src="' + img(p) + '" alt="">' +
+      '<div class="toast-body"><p class="toast-title">Added to your list</p><p>' + (n > 1 ? n + " × " : "") + esc(p.name) + "</p>" +
+      '<a class="text-link" href="list.html">View my list</a></div>' +
+      '<button class="toast-close" type="button" aria-label="Close">×</button>';
+    toast.classList.remove("is-shown");
+    void toast.offsetWidth;
+    toast.classList.add("is-shown");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(hideToast, 4500);
+  }
+  function hideToast() { if (toast) toast.classList.remove("is-shown"); }
 
   /* ---------- slow fade on scroll ---------- */
   function setupFades() {
     var els = document.querySelectorAll(".reveal");
     if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
+      // Items arriving together (a row of cards) fade in one after another.
+      entries.filter(function (en) { return en.isIntersecting; }).forEach(function (en, i) {
+        en.target.style.setProperty("--delay", i * 110 + "ms");
+        en.target.classList.add("is-in");
+        io.unobserve(en.target);
       });
     }, { rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll(".stagger").forEach(function (group) {
+      [].forEach.call(group.children, function (child, i) { child.style.setProperty("--i", i); });
+    });
     els.forEach(function (el) {
       // Only hide what starts below the first screen, so the page is complete at rest.
       if (el.getBoundingClientRect().top > window.innerHeight * 0.92) { el.classList.add("fade"); io.observe(el); }
     });
+  }
+
+  /* ---------- photos fade in as they load ---------- */
+  function markLoaded(root) {
+    (root || document).querySelectorAll("img").forEach(function (im) {
+      if (im.complete && im.naturalWidth) im.classList.add("is-loaded");
+    });
+  }
+  document.addEventListener("load", function (e) { if (e.target.tagName === "IMG") e.target.classList.add("is-loaded"); }, true);
+  window.addEventListener("load", function () { document.querySelectorAll("img").forEach(function (im) { im.classList.add("is-loaded"); }); });
+
+  /* ---------- soft fade between pages ---------- */
+  function setupPageFade() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest("a[href]");
+      if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var href = a.getAttribute("href");
+      if (a.target === "_blank" || /^(https?:|mailto:|tel:|#)/.test(href) || !/\.html/.test(href)) return;
+      var here = location.pathname.split("/").pop() || "index.html";
+      if (href.split("#")[0] === here) return; // same page, just a different section
+      e.preventDefault();
+      document.documentElement.classList.add("is-leaving");
+      setTimeout(function () { location.href = href; }, 380);
+    });
+    window.addEventListener("pageshow", function (e) { if (e.persisted) document.documentElement.classList.remove("is-leaving"); });
   }
 
   /* ---------- cursor dot (mouse only) ---------- */
@@ -180,7 +256,9 @@
     })();
   }
 
-  window.IB = { List: List, products: products, product: product, money: money, img: img, esc: esc, contact: CONTACT, arrow: ARROW, logoMark: logoMark };
+  window.IB = { List: List, products: products, product: product, money: money, priceLabel: priceLabel, img: img, esc: esc, contact: CONTACT, arrow: ARROW, logoMark: logoMark, socialLinks: socialLinks, markLoaded: markLoaded };
+
+  document.documentElement.classList.add("js");
 
   renderHeader();
   renderFooter();
@@ -188,7 +266,9 @@
   window.addEventListener("storage", refreshCounts);
   document.addEventListener("DOMContentLoaded", function () {
     refreshCounts();
+    markLoaded();
     setupFades();
+    setupPageFade();
     setupCursor();
   });
 })();

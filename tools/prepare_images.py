@@ -48,6 +48,7 @@ SITE = {
     "river-window": "_site/IMG_4084.jpeg",
     "centrepiece": "_site/IMG_7095.jpeg",
     "firepit-night": "_site/IMG_1713.jpg",
+    "mill-lawn": "_site/giant-outdoor-chess.jpg",
     "logo": "_site/IncaBella_logo_02.png",
 }
 

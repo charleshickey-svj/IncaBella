@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Hire Item · Inca Bella</title>
+<title>Hire Item · IncaBella</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Gilda+Display&family=Mrs+Saint+Delafield&display=swap">
@@ -37,18 +37,30 @@
       var slug = location.hash.slice(1);
       var p = IB.product(slug) || IB.products()[0];
       var g = window.INCABELLA_GROUPS.filter(function (x) { return x.id === p.group; })[0];
-      document.title = p.name + " · Inca Bella";
+      document.title = p.name + " · IncaBella";
       var crumb = document.querySelector("[data-crumb-group]");
       crumb.textContent = g.name; crumb.href = "hire.html#" + g.id;
 
-      var paras = p.description.split(/\n\s*\n/).map(function (t) { return "<p>" + IB.esc(t).replace(/\n/g, "<br>") + "</p>"; }).join("");
+      // Blank line = new paragraph; "- " lines = bullet list; a short line before a list = subheading.
+      var paras = p.description.split(/\n\s*\n/).map(function (block) {
+        var lines = block.split("\n"), html = "", items = [];
+        function flush() { if (items.length) { html += "<ul>" + items.join("") + "</ul>"; items = []; } }
+        lines.forEach(function (line, i) {
+          if (/^- /.test(line)) { items.push("<li>" + IB.esc(line.slice(2)) + "</li>"); return; }
+          flush();
+          var heading = lines.length > 1 && i === 0 && line.length < 40 && /^- /.test(lines[1] || "");
+          html += heading ? '<p class="sub">' + IB.esc(line) + "</p>" : "<p>" + IB.esc(line) + "</p>";
+        });
+        flush();
+        return html;
+      }).join("");
       box.innerHTML =
         '<div class="product-gallery"><img class="main" src="' + IB.img(p) + '" alt="' + IB.esc(p.name) + '">' +
         (p.images.length > 1 ? '<div class="thumbs">' + p.images.map(function (f, i) {
           return '<button type="button" data-i="' + i + '"' + (i ? "" : ' aria-current="true"') + '><img src="' + IB.img(p, i) + '" alt="Photo ' + (i + 1) + '"></button>';
         }).join("") + "</div>" : "") + "</div>" +
         '<div class="product-info"><h1>' + IB.esc(p.name) + "</h1>" +
-        '<p class="price">' + (p.group === "packages" ? "From " : "") + IB.money(p.price) + "</p>" +
+        '<p class="price">' + IB.priceLabel(p) + "</p>" +
         '<div class="desc">' + paras + "</div>" +
         '<div class="qty-row"><div class="qty"><button type="button" data-step="-1" aria-label="One fewer">−</button>' +
         '<input id="qty" type="number" inputmode="numeric" min="1" max="999" value="1" aria-label="Quantity">' +
@@ -74,9 +86,10 @@
       var related = IB.products().filter(function (x) { return x.group === p.group && x.slug !== p.slug; }).slice(0, 4);
       document.querySelector("[data-related]").innerHTML = related.map(function (r) {
         return '<article class="card"><a class="card-link" href="product.html#' + r.slug + '"><div class="ph"><img src="' + IB.img(r) + '" alt="' + IB.esc(r.name) + '" loading="lazy"></div>' +
-          "<h3>" + IB.esc(r.name) + '</h3></a><p class="price">' + IB.money(r.price) + '</p><button class="add-btn" type="button" data-add="' + r.slug + '">Add to my list</button></article>';
+          "<h3>" + IB.esc(r.name) + '</h3></a><p class="price">' + IB.priceLabel(r) + '</p><button class="add-btn" type="button" data-add="' + r.slug + '">Add to my list</button></article>';
       }).join("");
       document.dispatchEvent(new CustomEvent("listchange"));
+      IB.markLoaded(document);
     }
 
     render();

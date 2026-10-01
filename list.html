@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>My List · Inca Bella</title>
+<title>My List · IncaBella</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Gilda+Display&family=Mrs+Saint+Delafield&display=swap">
@@ -38,7 +38,7 @@
             <div class="field field--full"><label for="f-notes">Anything else Lucy should know?</label><textarea id="f-notes" name="notes" placeholder="Colours, themes, timings, or questions about any item"></textarea></div>
           </div>
           <p class="error-msg" data-error hidden></p>
-          <button class="btn btn--olive" type="submit">Send my list</button>
+          <button class="btn" type="submit">Send my list</button>
         </form>
         <div class="success" data-success hidden tabindex="-1"></div>
       </div>
@@ -68,14 +68,14 @@
       if (!ls.length) {
         listBox.innerHTML = '<div class="empty"><p class="script" style="font-size:3.2rem">Nothing here yet</p>' +
           "<p>Browse the hire collection and tap “Add to my list” on anything you'd like for your day.</p>" +
-          '<div class="btn-row"><a class="btn btn--olive" href="hire.html">Browse the hire collection</a><a class="btn" href="flowers.html">Flowers</a></div></div>';
+          '<div class="btn-row"><a class="btn" href="hire.html">Browse the hire collection</a><a class="btn" href="flowers.html">Flowers</a></div></div>';
         return;
       }
       listBox.innerHTML = '<ul class="list-items">' + ls.map(function (l) {
         var p = l.p;
         return '<li class="list-item"><a href="product.html#' + p.slug + '"><img src="' + IB.img(p) + '" alt=""></a>' +
           '<div><h3><a href="product.html#' + p.slug + '">' + IB.esc(p.name) + "</a></h3>" +
-          '<div class="meta"><span>' + IB.money(p.price) + " each</span>" +
+          '<div class="meta"><span>' + IB.money(p.price) + " " + (p.unit && p.unit !== "each" ? p.unit : "each") + "</span>" +
           '<span class="qty"><button type="button" data-dec="' + p.slug + '" aria-label="One fewer ' + IB.esc(p.name) + '">−</button>' +
           '<input type="number" inputmode="numeric" min="1" value="' + l.qty + '" data-qty="' + p.slug + '" aria-label="Quantity of ' + IB.esc(p.name) + '">' +
           '<button type="button" data-inc="' + p.slug + '" aria-label="One more ' + IB.esc(p.name) + '">+</button></span>' +
@@ -83,7 +83,7 @@
           '<span class="line-total">' + IB.money(p.price * l.qty) + "</span></li>";
       }).join("") + "</ul>" +
         '<div class="list-total"><span class="kicker">Estimated total</span><strong>' + IB.money(total(ls)) + "</strong></div>" +
-        "<p>Lucy will confirm your final price. Packages are priced “from” and depend on your plans.</p>" +
+        "<p>Lucy will confirm your final price, including any multi-buy savings.</p>" +
         '<p style="margin-top:24px"><a class="text-link" href="hire.html">Add more items</a></p>';
     }
 

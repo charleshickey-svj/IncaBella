@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Hire Collection · Inca Bella</title>
+<title>Hire Collection · IncaBella</title>
 <meta name="description" content="Hire lanterns, fairy lights, props, garden games and decoration packages for your wedding at Sopley Mill.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <p class="lede">Add anything you like to your list, then send it to Lucy. She'll confirm what's available for your date and send you a quote. Prices are per item unless the description says otherwise.</p>
+        <p class="lede">Add anything you like to your list, then send it to Lucy. She'll confirm what's available for your date and send you a quote. Each price shows what it covers, such as per table or per 10.</p>
       </div>
       <div class="filters" role="group" aria-label="Show a category" data-filters></div>
       <div data-groups></div>
@@ -54,7 +54,7 @@
           return '<article class="card reveal"><a class="card-link" href="product.html#' + p.slug + '">' +
             '<div class="ph"><img src="' + IB.img(p) + '" alt="' + IB.esc(p.name) + '" loading="lazy"></div>' +
             "<h3>" + IB.esc(p.name) + "</h3></a>" +
-            '<p class="price">' + (g.id === "packages" ? "From " : "") + IB.money(p.price) + "</p>" +
+            '<p class="price">' + IB.priceLabel(p) + "</p>" +
             '<button class="add-btn" type="button" data-add="' + p.slug + '">Add to my list</button></article>';
         }).join("") + "</div></section>";
     }).join("");

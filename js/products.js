@@ -1,13 +1,16 @@
 /*
-  Inca Bella hire collection: the one file to edit for products and prices.
+  IncaBella hire collection: the one file to edit for products and prices.
 
   Each product:
     slug         short web name, used in links (letters, numbers and dashes only)
     name         shown on the site
     price        in pounds, a plain number (1000 not "£1,000.00")
+    unit         optional, shown after the price, e.g. "per table", "per 10", "each"
+    from         optional, true shows "From £…" for packages that vary
     group        one of the group ids in INCABELLA_GROUPS below
     images       file names in assets/img/products/ (the first one is the main photo)
-    description  shown on the product page; a blank line starts a new paragraph
+    description  shown on the product page; a blank line starts a new paragraph,
+                 lines starting "- " become a bulleted list
 */
 window.INCABELLA_GROUPS = [
   {
@@ -18,7 +21,7 @@ window.INCABELLA_GROUPS = [
   {
     "id": "lanterns",
     "name": "Lanterns & candles",
-    "blurb": "Lanterns, tealights and vases, priced per item."
+    "blurb": "Lanterns, tealights and vases for tables, aisles and trees."
   },
   {
     "id": "lights",
@@ -47,6 +50,7 @@ window.INCABELLA_PRODUCTS = [
     "slug": "full-decoration-package-silver",
     "name": "Full Decoration Package – Tier 1",
     "price": 695.0,
+    "from": true,
     "group": "packages",
     "images": [
       "full-decoration-package-silver-1.jpg",
@@ -54,19 +58,20 @@ window.INCABELLA_PRODUCTS = [
       "full-decoration-package-silver-3.jpg",
       "full-decoration-package-silver-4.jpg"
     ],
-    "description": "Take the stress out of doing it yourself and let Incabella do a full wedding set-up. From £695 this package covers the decoration of all three floors of the mill.\n\nThe set up includes the following:\n\nFull Downstairs set-up:\n\nFull decoration of the downstair floor including the river window, your choice of post box, along with a large number of lanterns / t-lights / crates / potted flowers to make the ground floor look stunning\n\nCeremony room set-up to include:\n\nOn each corner of the stage: One Large White Wooden Lantern set on a crate along with at least 5 Glass Tall Vases / Hurricane Lanterns all with candles with lots of fresh greenery. Down the aisle: At the end of every other row, Mohani Lantern or a Large Glass Hurricane Lamp set on a log slice with candle. If you would like the outdoor ceremony instead there is a £50 supplement.\n\nTable Centre Pieces:\n\nIncabella will move your chosen aisle ends to become your table centre pieces (based on 8-10 round tables or 8 round tables and one top table of two tables long), the tables will also have the addition of a table number frame and t-lights\n\nOptional extras that can be added at an additional cost include greenery garlands / chair sashes / fairy lights / garden games / firepit / additional flowers / bouquets and button holes."
+    "description": "Take the stress out of doing it yourself and let IncaBella decorate all three floors of the Mill.\n\nGround floor\n- The river window display\n- Your choice of post box\n- Lots of lanterns, tealights, crates and potted flowers\n\nCeremony room\n- Each corner of the stage: a large white wooden lantern on a crate, with at least five tall glass vases or hurricane lanterns, all with candles and fresh greenery\n- Down the aisle: a Mohani lantern or large glass hurricane lamp on a log slice at the end of every other row\n- Prefer an outdoor ceremony? Add £50\n\nTables\n- Lucy moves your aisle ends up to become your table centre pieces, with a table number frame and tealights on each table\n- Based on 8–10 round tables, or 8 round tables and a top table two tables long\n\nOptional extras at additional cost: greenery garlands, chair sashes, fairy lights, garden games, the firepit, extra flowers, bouquets and buttonholes."
   },
   {
     "slug": "full-decoration-package-tier-2",
     "name": "Full Decoration Package – Tier 2",
     "price": 1000.0,
+    "from": true,
     "group": "packages",
     "images": [
       "full-decoration-package-tier-2-1.jpg",
       "full-decoration-package-tier-2-2.jpg",
       "full-decoration-package-tier-2-3.jpg"
     ],
-    "description": "Take the stress out of doing it yourself and let Incabella do a full wedding set-up. From £1000 this package covers the decoration of all three floors of the mill.\n\nThe set up includes the following:\n\nFull Downstairs set-up:\n\nFull decoration of the downstair floor including the river window, your choice of post box, along with a large number of lanterns / t-lights / crates / potted flowers to make the ground floor look stunning\n\nCeremony room set-up to include:\n\nOn each corner of the stage: One Large White Wooden Lantern set on a crate along with at least 5 Glass Tall Vases / Hurricane Lanterns all with candles with lots of fresh greenery. Down the aisle: At the end of every other row, Mohani Lantern or a Large Glass Hurricane Lamp set on a log slice with candle. White sash on each aisle end chair.\n\nNet of fairy lights along back wall in the ceremony room and fairy lights zig zagged across the ceremony room ceiling\n\nTable Centre Pieces:\n\nIncabella will move your chosen aisle ends to become your table centre pieces (based on 8-10 round tables or 8 round tables and one top table of two tables long), the tables will also have the addition of a table number frame and t-lights. Also includes greenery runner along top table.\n\nOptional extras that can be added at an additional cost include greenery garlands / aisle runner / arch / garden games / firepit / additional flowers / bouquets and button holes."
+    "description": "Everything in Tier 1, plus fairy lights, chair sashes and a greenery runner. IncaBella decorates all three floors of the Mill.\n\nGround floor\n- The river window display\n- Your choice of post box\n- Lots of lanterns, tealights, crates and potted flowers\n\nCeremony room\n- Each corner of the stage: a large white wooden lantern on a crate, with at least five tall glass vases or hurricane lanterns, all with candles and fresh greenery\n- Down the aisle: a Mohani lantern or large glass hurricane lamp on a log slice at the end of every other row, and a white sash on each aisle-end chair\n- A net of fairy lights along the back wall and fairy lights zig-zagged across the ceiling\n\nTables\n- Lucy moves your aisle ends up to become your table centre pieces, with a table number frame and tealights on each table\n- A greenery runner along the top table\n- Based on 8–10 round tables, or 8 round tables and a top table two tables long\n\nOptional extras at additional cost: greenery garlands, aisle runner, wooden arch, garden games, the firepit, extra flowers, bouquets and buttonholes."
   },
   {
     "slug": "ground-floor-decoration-package",
@@ -79,7 +84,7 @@ window.INCABELLA_PRODUCTS = [
       "ground-floor-decoration-package-3.jpg",
       "ground-floor-decoration-package-4.jpg"
     ],
-    "description": "Let Incabella decorate the bottom floor of Sopley Mill to make it look wonderful .\n\nThe set up includes the following:\n\nThe River Window Display (normally £105, see further details)\n\nChoice of Post Box, set up with flowers / t-lights\n\nHeart Light\n\nMoroccan Lantern\n\nMany additional lanterns and t-lights\n\nExtra t-lights\n\nPotted flowers\n\nSmall potted trees such as Olives\n\nIncludes set up on the morning of your wedding. Please do speak to Lucy as to what flowers are likely to be in season for your wedding date or if you are working towards any particular colour schemes."
+    "description": "Let IncaBella make the ground floor of Sopley Mill look wonderful.\n\n- The river window display (usually £95 on its own)\n- Your choice of post box, set up with flowers and tealights\n- The large heart light\n- A Moroccan lantern\n- Lots more lanterns and tealights\n- Potted flowers and small potted trees such as olives\n\nSet up on the morning of your wedding. Talk to Lucy about which flowers will be in season for your date, or about any colour scheme you have in mind."
   },
   {
     "slug": "outdoor-ceremony-set-up",
@@ -92,28 +97,28 @@ window.INCABELLA_PRODUCTS = [
       "outdoor-ceremony-set-up-3.jpg",
       "outdoor-ceremony-set-up-4.jpg"
     ],
-    "description": "A beautiful, rustic way to make an outdoor ceremony look beautiful\n\nThe set up includes the following: At the end of aisle, next to the signing table each corner will be decorated with crates / cut logs / lanterns and potted flowers. Down the central aisle each bench end will have a mixture of potted flowers / lanterns. It also includes two large potted Olive Trees.\n\nAdd in a beautiful wooden arch with billowing white material for £165\n\nThis is all set up on the morning of your wedding. It can be tailored to your exact requirements, i.e. substituting one type of lantern for another etc. However I can not normally confirm an exact potted flower type as it depends on what is growing at the time. Please note that once I have set this up outside I am not available to move it inside if the weather changes, I can of course though set it up inside rather than outside but do need to know by the night before."
+    "description": "A beautiful, rustic dressing for an outdoor ceremony.\n\n- Each corner by the signing table decorated with crates, cut logs, lanterns and potted flowers\n- A mix of potted flowers and lanterns at each bench end down the aisle\n- Two large potted olive trees\n\nAdd the wooden arch with billowing white fabric for £165.\n\nSet up on the morning of your wedding and tailored to you, for example swapping one lantern style for another. Exact potted flowers depend on what's growing at the time.\n\nOnce it's set up outside it can't be moved in if the weather changes. Lucy can set it up inside instead if you let her know by the evening before."
   },
   {
     "slug": "ceremonyroomset-up",
-    "name": "Ceremony Room Set-up",
+    "name": "Ceremony Room Set-Up",
     "price": 195.0,
     "group": "packages",
     "images": [
       "ceremonyroomset-up-1.jpg"
     ],
-    "description": "A beautiful, rustic way to make the ceremony room look and smell lovely.\n\nThe set up includes the following: On each corner of the stage: One Large White Wooden Lantern set on a crate along with at least 5 Glass Tall Vases / Hurricane Lanterns all with candles. Down the aisle: At the end of every other row, Mohani Lantern or a Large Glass Hurricane Lamp set on a log slice with candle. £195\n\nAdd in lots of fresh greenery for an additional £80\n\nThis is all set up on the morning of your wedding. It can be tailored to your exact requirements, i.e. substituting one type of lantern for another etc. Additional items can also be added at a reduced price such as:\n\nTwo small milk churns with flower arrangement £135\n\nIvory Chair Sashes tied to chairs 20 for £50\n\nFairy lights, aisle runners, additional floristry also available, please do ask for costs."
+    "description": "A beautiful, rustic way to make the ceremony room look and smell lovely.\n\n- Each corner of the stage: a large white wooden lantern on a crate, with at least five tall glass vases or hurricane lanterns, all with candles\n- Down the aisle: a Mohani lantern or large glass hurricane lamp on a log slice at the end of every other row\n\nAdd-ons\n- Lots of fresh greenery: £80\n- Two small milk churns with flower arrangements: £135\n- Ivory chair sashes, 20 for £50\n- Fairy lights, aisle runners and extra flowers: ask Lucy for prices\n\nSet up on the morning of your wedding and tailored to you, for example swapping one lantern style for another."
   },
   {
     "slug": "riverwindowsetup",
-    "name": "River Window Set-up",
+    "name": "River Window Set-Up",
     "price": 95.0,
     "group": "packages",
     "images": [
       "riverwindowsetup-1.jpg",
       "riverwindowsetup-2.jpg"
     ],
-    "description": "Let Incabella decorate the alcove in the River Window to make it look fantastic\n\nThe set up includes lots of seasonal potted plants, olive tree, crates, small love letters, a large selection of t-lights and lanterns and crates to make the display look fab.\n\n£95 – Includes set up on the morning of your wedding. Please do speak to Lucy as to what flowers are likely to be in season for your wedding date or if you are working towards any particular colour schemes."
+    "description": "Let IncaBella dress the alcove in the Mill's river window.\n\n- Seasonal potted plants and an olive tree\n- Crates and small LOVE letters\n- A large selection of tealights and lanterns\n\nSet up on the morning of your wedding. Talk to Lucy about which flowers will be in season for your date, or about any colour scheme you have in mind."
   },
   {
     "slug": "apple-crate-set-up",
@@ -123,24 +128,26 @@ window.INCABELLA_PRODUCTS = [
     "images": [
       "apple-crate-set-up-1.jpg"
     ],
-    "description": "Let Incabella do a wonderful Apple Crate Set-Up, looks wonderful outside as your guests arrive .\n\nThe set up includes the following:\n\n5 Apple Crates\n\nA selection of lanterns / t-lights\n\nSelection of potted flowers /plants and small posies of flowers\n\nCan be set-up outside or in\n\nIncludes set up on the morning of your wedding. Please do speak to Lucy as to what flowers are likely to be in season for your wedding date or if you are working towards any particular colour schemes."
+    "description": "A lovely welcome as your guests arrive.\n\n- Five vintage apple crates\n- A selection of lanterns and tealights\n- Potted flowers, plants and small posies\n- Set up outside or in\n\nSet up on the morning of your wedding. Talk to Lucy about which flowers will be in season for your date, or about any colour scheme you have in mind."
   },
   {
     "slug": "table-centre-piece-package",
-    "name": "Table Centre Piece Package",
+    "name": "Mohani Lantern Table Centre Piece",
     "price": 25.0,
+    "unit": "per table",
     "group": "packages",
     "images": [
       "table-centre-piece-package-1.jpg",
       "table-centre-piece-package-2.jpg",
       "table-centre-piece-package-3.jpg"
     ],
-    "description": "A beautiful table centre piece that fills the room with warmth and elegance.\n\nEach table centre piece includes an antique brass Mohani lantern with candle set on a rustic wood slice surrounded by fresh greenery, along with 5 diamond glass t-lights as well as a pretty table number holder and card.\n\nPer table £25\n\nThere is also the option of using the wood slices and lanterns as aisle ends before being moved up to the tables for a small additional cost. Add in 3 small vases of flowers for £15 per table."
+    "description": "A table centre piece that fills the room with warmth.\n\n- An antique brass Mohani lantern with candle on a rustic wood slice\n- Fresh greenery\n- Five diamond glass tealights\n- A table number holder and card\n\nAdd three small vases of flowers for £15 per table. The lanterns and wood slices can also start the day as aisle ends and move up to the tables, for a small extra cost."
   },
   {
     "slug": "table-centre-piece-package-2",
-    "name": "Table Centre Piece Package – 2",
+    "name": "Glass Cylinder Table Centre Piece",
     "price": 30.0,
+    "unit": "per table",
     "group": "packages",
     "images": [
       "table-centre-piece-package-2-1.jpg",
@@ -148,32 +155,33 @@ window.INCABELLA_PRODUCTS = [
       "table-centre-piece-package-2-3.jpg",
       "table-centre-piece-package-2-4.jpg"
     ],
-    "description": "A beautiful, elegant table centre piece that works just as well as an aisle end.\n\nEach table centre piece includes three glass cylinder vases of varying heights with either a pillar candle or the option of water and floating candles, set in the centre of the table along with greenery and a choice of table name / number frame. For the top table these look just as good set along the edge rather than in the centre.\n\nPer table £30\n\nThere is also the option of using the glass vase as aisle ends before being moved up to the tables for a small additional cost. These images show LED candles but real candles are also an option. Chair drapes and optional extras are also possible."
+    "description": "An elegant centre piece that works just as well as an aisle end.\n\n- Three glass cylinder vases of different heights, with pillar candles or floating candles\n- Fresh greenery\n- A table name or number frame\n\nOn the top table these look lovely set along the front edge. Real or LED candles are both options. The vases can start the day as aisle ends and move up to the tables, for a small extra cost. Chair drapes and other extras are also available."
   },
   {
     "slug": "table-centre-piece-long-table",
-    "name": "Table Centre Piece – Long table",
+    "name": "Long Table Centre Piece",
     "price": 35.0,
+    "unit": "per table",
     "group": "packages",
     "images": [
       "table-centre-piece-long-table-1.jpg",
       "table-centre-piece-long-table-2.jpg"
     ],
-    "description": "Ideal for rustic long tables.\n\nThis includes a greenery runner down the middle of the table interspersed with tall clear glass lanterns and t-lights.\n\nPer table £35"
+    "description": "Made for rustic long tables.\n\n- A greenery runner down the middle of the table\n- Tall clear glass lanterns and tealights along it"
   },
   {
     "slug": "ceiling-fairy-lights-ceremony-room",
-    "name": "Ceiling Fairy lights – Ceremony Room",
+    "name": "Ceiling Fairy Lights – Ceremony Room",
     "price": 125.0,
     "group": "lights",
     "images": [
       "ceiling-fairy-lights-ceremony-room-1.jpg"
     ],
-    "description": "Fairy lights zig zag across the ceiling of the ceremony room\n\nAdds a soft, romantic touch to the room\n\nWarm lights\n\nCombine with fairy lights net across the back wall for an additional £100\n\nReviews\n\nThere are no reviews yet.\n\nAdd a review\n\nBe the first to review “Ceiling Fairy lights – Ceremony Room” Cancel reply\nYour Review\nName *\n\nEmail *\n\nSave my name, email, and website in this browser for the next time I comment."
+    "description": "Warm white fairy lights zig-zagged across the ceremony room ceiling for a soft, romantic glow.\n\nAdd the fairy light wall net on the back wall for an extra £100."
   },
   {
     "slug": "fairylight-wall-net-ceremony-room",
-    "name": "Fairylight Wall Net – Ceremony Room",
+    "name": "Fairy Light Wall Net – Ceremony Room",
     "price": 125.0,
     "group": "lights",
     "images": [
@@ -181,23 +189,24 @@ window.INCABELLA_PRODUCTS = [
       "fairylight-wall-net-ceremony-room-2.jpg",
       "fairylight-wall-net-ceremony-room-3.jpg"
     ],
-    "description": "Back wall of the ceremony room is covered in fairy lights\n\nAdds a soft, romantic touch to the room\n\nWarm lights\n\nCombine with zig zag lights across the ceiling for an additional £100\n\nReviews\n\nThere are no reviews yet.\n\nAdd a review\n\nBe the first to review “Fairylight Wall Net – Ceremony Room” Cancel reply\nYour Review\nName *\n\nEmail *\n\nSave my name, email, and website in this browser for the next time I comment."
+    "description": "The back wall of the ceremony room covered in warm white fairy lights for a soft, romantic glow.\n\nAdd the zig-zag ceiling lights for an extra £100."
   },
   {
     "slug": "fairy-light-globes",
     "name": "Stairwell Fairy Light Globes",
     "price": 105.0,
+    "unit": "for six, fitted",
     "group": "lights",
     "images": [
       "fairy-light-globes-1.jpg",
       "fairy-light-globes-2.jpg",
       "fairy-light-globes-3.jpg"
     ],
-    "description": "40 cm Globe Diameter\n\n240 warm white LEDs\n\nPrice is for six globes hanging down the stairwell and includes installation\n\nFor Hire at Sopley Mill only\n\nGlobes can be hire individually for other locations at the Mill for £20 per globe\n\nReviews\n\nThere are no reviews yet.\n\nAdd a review\n\nBe the first to review “Stairwell Fairy Light Globes” Cancel reply\nYour Review\nName *\n\nEmail *\n\nSave my name, email, and website in this browser for the next time I comment."
+    "description": "Six glowing globes hanging down the Mill's stairwell.\n\n- 40cm diameter, 240 warm white LEDs each\n- Price includes installation\n- Single globes for elsewhere in the Mill: £20 each"
   },
   {
     "slug": "love-light-letters",
-    "name": "Love light up letters",
+    "name": "LOVE Light-Up Letters",
     "price": 20.0,
     "group": "lights",
     "images": [
@@ -205,7 +214,7 @@ window.INCABELLA_PRODUCTS = [
       "love-light-letters-2.jpg",
       "love-light-letters-3.jpg"
     ],
-    "description": "Beautiful aluminium LOVE letters with inbuilt twinkly lights\n\nEach letter measures approx 25cm (h) by 21cm\n\nBattery powered so no plug needed (batteries provided)\n\nLook fab set up on windowsills or head table\n\nHire with my stepladder and use them to cascade down the ladder\n\n£20 to hire for the day or £15 if hired with a Garden Games package\n\nTwo available"
+    "description": "Aluminium LOVE letters with built-in twinkly lights.\n\n- Each letter about 25cm high and 21cm wide\n- Battery powered, batteries included\n- Lovely on a windowsill or the top table, or cascading down the step ladder\n- £15 when hired with a garden games package\n- Two sets available"
   },
   {
     "slug": "large-heart-light",
@@ -215,7 +224,7 @@ window.INCABELLA_PRODUCTS = [
     "images": [
       "large-heart-light-1.jpg"
     ],
-    "description": "Handmade steel heart light\n\nLooks stunning in the evening or during the day\n\nInside use only and requires a plug\n\nIncluded in the downstairs floor set-up\n\n£30 to hire for the day Only one available Cost to buy / replace £230"
+    "description": "A handmade steel heart light that looks stunning day or night.\n\n- Indoor use only; needs a plug\n- Included in the Ground Floor Decoration Package\n- One available"
   },
   {
     "slug": "firepit",
@@ -228,12 +237,13 @@ window.INCABELLA_PRODUCTS = [
       "firepit-3.jpg",
       "firepit-4.jpg"
     ],
-    "description": "This stunning sculptural firepit ball makes a unique statement to add drama and warmth to the outside of the Mill. The beautiful African Safari scene is hand carved around the ball which comes alive when lit. Measuring almost a metre in diameter it is a large striking statement that encourages people to gather around it.\n\n£100 to hire for the duration of your wedding / event\n\nFirewood not included."
+    "description": "A sculptural firepit ball with an African safari scene hand-cut around it that comes alive when lit. At almost a metre across, it adds drama and warmth outside the Mill and draws guests together.\n\n- Hire is for the whole of your wedding or event\n- Firewood not included"
   },
   {
     "slug": "hay-bales",
     "name": "Hay Bales",
     "price": 10.0,
+    "unit": "per bale",
     "group": "outdoor",
     "images": [
       "hay-bales-1.jpg",
@@ -241,55 +251,59 @@ window.INCABELLA_PRODUCTS = [
       "hay-bales-3.jpg",
       "hay-bales-4.jpg"
     ],
-    "description": "We offer Hay Bale Hire for weddings at Sopley Mill (and other wedding venues on request). Hay Bales are a great way to create additional outdoor seating. They are an ideal height for seating – use them on their own for a very natural, country look or drape them with material and add cushions to form stylish country seating. If you decide to eat outside you can use them as seating for the tables or be creative and build them up to form a Hay Sofa! Hay Bales are placed on the lawn on the morning of your wedding and can be left out over night, we will clear them away the following morning.\n\nHaybale hire cost: £10.00 per bale\n\nBlankets: We offer the hire of blankets at an additional cost of £50 for 10 blankets or £25 for 5 blankets (please enquire for the colours I have available).\n\nHaybale Package: Includes 10 hay bales, blankets, 2 cushions, a table, 2 potted flower pots (in season flowers such as daffodils (spring) lavender (summer), 2 Lanterns and and set up into haybale furniture for £160\n\nReviews\n\nThere are no reviews yet.\n\nAdd a review\n\nBe the first to review “Hay Bales” Cancel reply\nYour Review\nName *\n\nEmail *\n\nSave my name, email, and website in this browser for the next time I comment."
+    "description": "Extra outdoor seating at just the right height. Use them as they are for a natural country look, dress them with fabric and cushions, use them at outdoor tables, or stack them into a hay sofa.\n\nBales go out on the lawn on the morning of your wedding and can stay out overnight. They're cleared away the next morning.\n\n- Blankets: 5 for £25 or 10 for £50 (ask Lucy which colours are available)\n- Hay Bale Package, £160: 10 bales, blankets, 2 cushions, a table, 2 pots of seasonal flowers and 2 lanterns, set up as hay bale furniture"
   },
   {
     "slug": "extralargepottedolivetrees",
-    "name": "Large Potted Olive Trees",
+    "name": "Large Potted Olive Tree",
     "price": 30.0,
+    "unit": "each",
     "group": "outdoor",
     "images": [
       "extralargepottedolivetrees-1.jpg"
     ],
-    "description": "Large Olive Trees\n\nCan be displayed inside or out\n\nLook great at the end of aisle\n\nThese are potted in plastic pot but price includes for them to be put into large dark grey pot.\n\n£30 for one to hire for the day or £60 for the pair Two available Cost to buy / replace £90 per tree"
+    "description": "A large olive tree for inside or out. Lovely at the end of the aisle.\n\n- Displayed in a large dark grey pot\n- £60 for the pair; two available"
   },
   {
     "slug": "small-potted-olive-trees",
-    "name": "Medium Potted Olive Trees",
+    "name": "Medium Potted Olive Tree",
     "price": 15.0,
+    "unit": "each",
     "group": "outdoor",
     "images": [
       "small-potted-olive-trees-1.jpg",
       "small-potted-olive-trees-2.jpg"
     ],
-    "description": "Medium Potted Olive Trees\n\nCan be displayed inside or out\n\nThese are potted in vintage zinc buckets\n\n£15 for one to hire for the day or £30 for the pair Two available Cost to buy / replace £90 per tree"
+    "description": "A medium olive tree in a vintage zinc bucket, for inside or out.\n\n- £30 for the pair; two available"
   },
   {
     "slug": "full-set-of-all-8-garden-games",
-    "name": "Full set of all 8 Garden Games",
+    "name": "All Eight Garden Games",
     "price": 125.0,
     "group": "games",
     "images": [
       "full-set-of-all-8-garden-games-1.jpg",
       "full-set-of-all-8-garden-games-2.jpg"
     ],
-    "description": "£125 or £150 for both Giant Chess and Giant Cornhole\n\nGiant Chess or Giant Cornhole\n\nGiant Jenga\n\nGiant Connect 4\n\nGiant Noughts & Crosses\n\nGiant Dominoes\n\nGiant Pick Up Sticks\n\nGiant Limbo\n\nQuoits\n\nFor Games Hire packages away from Sopley Mill, the games need to be collected and returned to Sopley Mill. SOPLEY MILL WEDDINGS ONLY Full set of all 8 Garden Games: £125 Price includes all as above. Games will be set out at Sopley Mill and collected from Sopley Mill early in the evening (we will try and do this while your guests are having their wedding breakfast). Games can be cancelled for a full refund as long as 24 hours notice is given – this should give you time to get a fairly accurate idea of the weather."
+    "description": "The full set of giant garden games.\n\n- Giant chess or giant cornhole (£150 for both)\n- Giant Jenga\n- Giant Connect 4\n- Giant noughts and crosses\n- Giant dominoes\n- Giant pick-up sticks\n- Limbo\n- Quoits\n\nLucy sets the games out at the Mill and collects them early in the evening, usually during the wedding breakfast. Cancel up to 24 hours before for a full refund, so you can wait and see the weather forecast."
   },
   {
     "slug": "set-of-4-garden-games",
-    "name": "Set of any 4 Garden Games including Giant Chess",
+    "name": "Four Garden Games with Giant Chess",
     "price": 100.0,
+    "unit": "per set",
     "group": "games",
     "images": [
       "set-of-4-garden-games-1.jpg",
       "set-of-4-garden-games-2.jpg"
     ],
-    "description": "Set of 4 Garden Games to include Giant Chess and your choice of remaining three games: £100\n\nPrice includes Delivery, Set up and Installation at Sopley Mill\n\nGiant Chess and your choice of remaining games ( Giant Jenga, Giant Connect 4, Giant Noughts & Crosses, Giant Dominoes, Giant Pick Up Sticks, Limbo and Quoits.)\n\nGames can be hired for other locations but must be collected and returned to Sopley Mill. If availability allows games can be collected the day before your wedding / event and returned the day after."
+    "description": "Giant chess plus three more games of your choice: giant Jenga, giant Connect 4, giant noughts and crosses, giant dominoes, giant pick-up sticks, limbo or quoits.\n\n- Delivery and set-up at Sopley Mill included\n- Can be hired for other venues if collected from and returned to the Mill, the day before and after where possible"
   },
   {
     "slug": "set-of-4-garden-games-not-including-giant-chess",
-    "name": "Set of any 4 Garden Games NOT including Giant Chess",
+    "name": "Four Garden Games",
     "price": 75.0,
+    "unit": "per set",
     "group": "games",
     "images": [
       "set-of-4-garden-games-not-including-giant-chess-1.jpg",
@@ -297,7 +311,7 @@ window.INCABELLA_PRODUCTS = [
       "set-of-4-garden-games-not-including-giant-chess-3.jpg",
       "set-of-4-garden-games-not-including-giant-chess-4.jpg"
     ],
-    "description": "£75 Price includes Delivery, Set up and Installation at Sopley Mill\n\nAny four games EXCEPT Giant Chess ( Giant Jenga, Giant Connect 4, Giant Noughts & Crosses, Giant Dominoes, Giant Pick Up Sticks, Limbo and Quoits.)\n\nGames can be hired for other locations but must be collected and returned to Sopley Mill. If availability allows games can be collected the day before your wedding / event and returned the day after."
+    "description": "Any four games except giant chess: giant Jenga, giant Connect 4, giant noughts and crosses, giant dominoes, giant pick-up sticks, limbo or quoits.\n\n- Delivery and set-up at Sopley Mill included\n- Can be hired for other venues if collected from and returned to the Mill, the day before and after where possible"
   },
   {
     "slug": "giant-cornhole",
@@ -308,17 +322,17 @@ window.INCABELLA_PRODUCTS = [
       "giant-cornhole-1.jpg",
       "giant-cornhole-2.jpg"
     ],
-    "description": "Or included in the hire of various games packages\n\nA great fun, easy to play game for all ages\n\nIncludes 2 x regulation size boards – 120 x 60 cm with a 6 inch target hole.\n\nIncludes 8 (4 of each set of) professional corn hole bags"
+    "description": "An easy, fun game for all ages. Also included in some garden games sets.\n\n- Two regulation boards, 120 × 60cm, with a 6-inch hole\n- Eight professional cornhole bags"
   },
   {
     "slug": "kids-play-tent",
-    "name": "Kids Play Tent",
+    "name": "Kids' Play Tent",
     "price": 30.0,
     "group": "games",
     "images": [
       "kids-play-tent-1.jpg"
     ],
-    "description": "Makes a great den for children – can be used inside or out\n\nFits three small children in with ease and more at a squash!\n\nIntegral base with ties and window with flap\n\n£30 to hire for the day or two for £50 Two available (this one and a different pattern for the second one) Cost to buy / replace £85"
+    "description": "A den for little guests, inside or out. Fits three small children easily, and more at a squash.\n\n- Built-in base, ties and a window with a flap\n- Two for £50 (the second has a different pattern)"
   },
   {
     "slug": "wooden-arch",
@@ -331,7 +345,7 @@ window.INCABELLA_PRODUCTS = [
       "wooden-arch-3.jpg",
       "wooden-arch-4.jpg"
     ],
-    "description": "Rustic wooden arch, great for outdoor ceremonies, can also be used inside.\n\nRustic Wooden Arch\n\nComes with ivory / white material\n\nAdditional fresh greenery added for £75\n\nFlowers can be added for an additional cost"
+    "description": "A rustic wooden arch dressed with ivory or white fabric. Beautiful for outdoor ceremonies and can be used inside too.\n\n- Add fresh greenery for £75\n- Flowers can be added at additional cost"
   },
   {
     "slug": "cast-iron-red-post-box",
@@ -342,7 +356,7 @@ window.INCABELLA_PRODUCTS = [
       "cast-iron-red-post-box-1.jpg",
       "cast-iron-red-post-box-2.jpg"
     ],
-    "description": "Cast Iron ER Royal Mail Pillar Red Post Box\n\nComplete with display card and key if required\n\nA stylish and secure way to receive your cards and money gifts\n\n£40 to hire for the day\n\n£35 to hire for the day if booked with any other Incabella Hire Items\n\nOnly one available\n\nCost to buy / replace £200"
+    "description": "A cast iron ER Royal Mail pillar box: a stylish, secure home for cards and gifts.\n\n- Comes with display card and key\n- £35 when booked with any other IncaBella hire\n- One available"
   },
   {
     "slug": "woodenpostbox",
@@ -352,60 +366,65 @@ window.INCABELLA_PRODUCTS = [
     "images": [
       "woodenpostbox-1.jpg"
     ],
-    "description": "Wooden / Metal Post Box\n\nRustic style\n\nLooks great on table surrounded by t-lights and lanterns\n\nGreat way to receive your cards and gifts\n\n£20 to hire for the day Only one available Cost to buy / replace £50"
+    "description": "A rustic wood and metal post box for cards and gifts. Lovely on a table surrounded by tealights and lanterns.\n\n- One available"
   },
   {
     "slug": "large-vintage-milk-churn",
     "name": "Large Vintage Milk Churn",
     "price": 25.0,
+    "unit": "each",
     "group": "props",
     "images": [
       "large-vintage-milk-churn-1.jpg",
       "large-vintage-milk-churn-2.jpg"
     ],
-    "description": "10 Gallon Aluminium Vintage Milk Churn\n\nLooks fantastic with large floral display\n\nGreat at the end of the aisle or either side of the door\n\nGet your florist to provide a flower display or for a less expensive option fill with flowering branches\n\n£25 to hire for the day\n\n£45 for two\n\nTwo available\n\nCost to replace £90"
+    "description": "A 10-gallon aluminium milk churn. Stunning with a large floral display, at the end of the aisle or either side of a door.\n\n- Fill with flowering branches for a less expensive option\n- £45 for two; two available"
   },
   {
     "slug": "medium-vintage-milk-churn",
     "name": "Medium Vintage Milk Churn",
     "price": 20.0,
+    "unit": "each",
     "group": "props",
     "images": [
       "medium-vintage-milk-churn-1.jpg"
     ],
-    "description": "Aluminium Vintage Milk Churn\n\nApprox 50cm high\n\nLooks fantastic with floral display\n\nGreat at the end of the aisle or either side of the door\n\nIncabella is happy to do a flower display for an additional charge please enquire for details\n\nOr fill yourself with flowering branches\n\n£20 to hire for the day £35 for two Two available Cost to replace £60"
+    "description": "An aluminium milk churn about 50cm tall. Lovely with flowers at the end of the aisle or either side of a door.\n\n- Lucy can add a flower display for an extra charge, or fill it yourself with flowering branches\n- £35 for two; two available"
   },
   {
     "slug": "small-vintagemilkchurn",
     "name": "Small Vintage Milk Churn",
     "price": 15.0,
+    "unit": "each",
     "group": "props",
     "images": [
       "small-vintagemilkchurn-1.jpg"
     ],
-    "description": "Small Vintage Milk Churn\n\nLooks fantastic with floral display or potted flowers in it\n\nGreat for either side of a door or the aisle\n\nPrice for milk churn only £15 to hire for the day £25 for two Two available Cost to replace £35\n\nMilk churn with flower arrangement £80 for one £150 for two"
+    "description": "A small milk churn for flowers or potted plants, either side of a door or the aisle.\n\n- £25 for two; two available\n- With a flower arrangement: £80 each or £150 for two"
   },
   {
     "slug": "vintageapplecrates",
     "name": "Vintage Apple Crates",
     "price": 5.0,
+    "unit": "each",
     "group": "props",
     "images": [
       "vintageapplecrates-1.jpg",
       "vintageapplecrates-2.jpg",
       "vintageapplecrates-3.jpg"
     ],
-    "description": "Vintage Wooden Crates – various sizes\n\nIdeal for displaying potted flowers and lanterns\n\nAlso available with potted flower hire – just ask for details\n\nUse as side tables with haybales\n\n£5 to hire one\n\nFive available – mixed large and small\n\nCost to buy / replace £15"
+    "description": "Wooden crates in mixed sizes. Ideal for displaying potted flowers and lanterns, or as side tables with hay bales.\n\n- Can be hired with potted flowers; just ask\n- Five available, large and small"
   },
   {
     "slug": "two-vintage-suitcases",
     "name": "Two Vintage Suitcases",
     "price": 15.0,
+    "unit": "for the pair",
     "group": "props",
     "images": [
       "two-vintage-suitcases-1.jpg"
     ],
-    "description": "Two Vintage suitcases\n\nDark tan colour\n\nUse as a quirky table or an alternative to a post box\n\nAlso available as part of the Haybale package – see Haybales\n\n2 for £15\n\n1 for £10\n\nTrunk and Suitcase package available for £30\n\n2 Available\n\nCost to buy / replace £35 per suitcase"
+    "description": "Two dark tan vintage suitcases. Use them as a quirky table or instead of a post box.\n\n- One suitcase: £10\n- Suitcases and trunk together: £30\n- Also part of the Hay Bale Package"
   },
   {
     "slug": "vintagetrunk",
@@ -416,11 +435,11 @@ window.INCABELLA_PRODUCTS = [
       "vintagetrunk-1.jpg",
       "vintagetrunk-2.jpg"
     ],
-    "description": "Large vintage trunk\n\nUse as a quirky table\n\nAlso available as part of the Haybale package – see Haybales\n\nSize\n\n1 for £20\n\nTrunk and Suitcase package available for £30\n\n1 Available\n\nCost to buy / replace £60 per lantern"
+    "description": "A large vintage trunk to use as a quirky table.\n\n- Trunk and two suitcases together: £30\n- Also part of the Hay Bale Package\n- One available"
   },
   {
     "slug": "wooden-display-step-ladder",
-    "name": "Wooden display step ladder",
+    "name": "Wooden Display Step Ladder",
     "price": 20.0,
     "group": "props",
     "images": [
@@ -428,7 +447,7 @@ window.INCABELLA_PRODUCTS = [
       "wooden-display-step-ladder-2.jpg",
       "wooden-display-step-ladder-3.jpg"
     ],
-    "description": "Wooden step ladder painted in Farrow and Ball\n\nUse inside or out\n\nGreat for displaying flowers / tea lights / cupcakes\n\n£20 to hire for the day\n\nOnly one available\n\nCost to buy / replace £90"
+    "description": "A wooden step ladder painted in Farrow & Ball, for inside or out. Great for displaying flowers, tealights or cupcakes.\n\n- One available"
   },
   {
     "slug": "displayblackboard",
@@ -438,22 +457,24 @@ window.INCABELLA_PRODUCTS = [
     "images": [
       "displayblackboard-1.jpg"
     ],
-    "description": "Rustic wooden framed hinged blackboard\n\nDouble sided (can write on both sides)\n\nVintage wooden frame in a light khaki green\n\nHeight 98cm, width 46cm\n\n£15 to hire for the day\n\nOnly one available\n\nCost to buy / replace £50"
+    "description": "A hinged, double-sided blackboard in a vintage khaki-green wooden frame.\n\n- 98cm high, 46cm wide\n- One available"
   },
   {
     "slug": "bunting",
-    "name": "Country Bunting – 25 Metres",
+    "name": "Country Bunting",
     "price": 25.0,
+    "unit": "25 metres",
     "group": "props",
     "images": [
       "bunting-1.jpg"
     ],
-    "description": "25 metres of 100% Cotton English Country Bunting\n\nCombination of checked and striped fabrics on a white cotton line\n\nConsists of 84 Flags (each flat is 19 x 20cm)\n\nDouble-sided (two pieces of fabric sewn together)\n\nCan be used inside or outside\n\nLooks fantastic tied to the trees stretching across the lawn\n\n£25 to hire for the day\n\nOnly one currently available but please request if you would like more)\n\nCost to buy / replace £59"
+    "description": "25 metres of cotton English country bunting in checks and stripes on a white line. Lovely strung between the trees across the lawn.\n\n- 84 double-sided flags, each 19 × 20cm\n- Inside or out\n- Ask Lucy if you'd like more than one length"
   },
   {
     "slug": "10-x-antique-brass-table-numbers",
-    "name": "10 x Antique Brass Table Numbers",
+    "name": "Antique Brass Table Numbers",
     "price": 30.0,
+    "unit": "set of 10",
     "group": "props",
     "images": [
       "10-x-antique-brass-table-numbers-1.jpg",
@@ -461,148 +482,162 @@ window.INCABELLA_PRODUCTS = [
       "10-x-antique-brass-table-numbers-3.jpg",
       "10-x-antique-brass-table-numbers-4.jpg"
     ],
-    "description": "Antique Brass table number picture frame\n\nIncludes printed table number insert as in image for numbers 1-9 and Top Table or numbers 1-10\n\nPersonalised table names possible for a an additional cost\n\nOr print your own table names to put inside instead – takes image size 7×5\n\n£30 for ten antique brass frames with insert. 10 available\n\nCost to buy / replace £20 per frame"
+    "description": "Ten antique brass picture frames with printed inserts: numbers 1–9 and Top Table, or 1–10.\n\n- Personalised table names available at extra cost\n- Or print your own at 7 × 5 inches"
   },
   {
     "slug": "log-slices",
-    "name": "10 x Log Slices",
+    "name": "Log Slices",
     "price": 30.0,
+    "unit": "set of 10",
     "group": "props",
     "images": [
       "log-slices-1.jpg"
     ],
-    "description": "Rustic wooden log slices\n\nVarious widths / sizes available\n\nAll slightly different so please do ask to see them\n\n£30 for 10 Large Slices\n\n£45 for 10 Large and 10 Small Log Slices\n\nOnly one available\n\nCost to buy / replace £50"
+    "description": "Rustic wooden log slices in various sizes, each one slightly different. Ask to see them.\n\n- 10 large and 10 small slices: £45"
   },
   {
     "slug": "round-mirror-plate-table-centre-piece",
-    "name": "Round mirror plates – table centre pieces",
+    "name": "Round Mirror Plate",
     "price": 2.95,
+    "unit": "each",
     "group": "props",
     "images": [
       "round-mirror-plate-table-centre-piece-1.jpg"
     ],
-    "description": "Round Mirror Plate – 40cm\n\nGreat table centre piece\n\nDecorate with vases / pots of flowers and tea lights\n\nBevelled Edge\n\n£2.95 per mirror\n\n10 for £25\n\n10 Available\n\nCost to buy / replace £11.35 per mirror"
+    "description": "A 40cm bevelled round mirror plate. A lovely base for vases, flowers and tealights in the centre of each table.\n\n- 10 for £25; ten available"
   },
   {
     "slug": "sweetjars",
-    "name": "Sweet Jars",
+    "name": "Vintage Sweet Jars",
     "price": 4.0,
+    "unit": "each",
     "group": "props",
     "images": [
       "sweetjars-1.jpg"
     ],
-    "description": "Make your own sweet cart using these fab vintage sweet jars\n\nFill each one with a different type of sweet\n\nHeight 30cm\n\nMade from Glass\n\nTo Hire: £4.00 per Jar\n\nOr 4 for £15\n\n8 Available\n\nCost to buy / replace £15.95 per jar"
+    "description": "Glass sweet jars, 30cm tall. Fill each with a different sweet and make your own sweet cart.\n\n- 4 for £15; eight available"
   },
   {
     "slug": "tall-glass-dinner-candle-holder",
     "name": "Tall Glass Dinner Candle Holder",
     "price": 4.0,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "tall-glass-dinner-candle-holder-1.jpg",
       "tall-glass-dinner-candle-holder-2.jpg"
     ],
-    "description": "Allows you to have tall, elegant dinner candles\n\nMakes lovely table centre pieces – particularly for long tables\n\nEnclosed flame means suitable for indoor use\n\nEach glass holder is 30cm tall, diameter 7cm\n\nIvory dinner candle included\n\nPlease be aware the glass does get very hot when candles have been lit for a long time so keep out of reach of children\n\nTo Hire: £4 per glass holder\n\nPackages also available"
+    "description": "Tall, elegant dinner candles in an enclosed glass holder, safe for indoor use. Especially lovely along long tables.\n\n- 30cm tall, 7cm across\n- Ivory dinner candle included\n- The glass gets very hot after a while, so keep out of reach of children\n- Packages also available"
   },
   {
     "slug": "rustic-brass-votive",
     "name": "Rustic Brass Votive",
     "price": 2.5,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "rustic-brass-votive-1.jpg"
     ],
-    "description": "Rustic brass votive\n\nLattice effect\n\n9.5cm x 7.5cm, tea light included\n\n10 for £20\n\n12 Available Cost to buy / replace £10 per votive"
+    "description": "A lattice-effect brass votive, 9.5 × 7.5cm, with tealight.\n\n- 10 for £20; twelve available"
   },
   {
     "slug": "sana-storm-lantern-small",
-    "name": "Sana Storm Lantern – Small",
+    "name": "Sana Storm Lantern",
     "price": 6.95,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "sana-storm-lantern-small-1.jpg"
     ],
-    "description": "Stylish grey steel and glass lanterns\n\nEnclosed Candle means can be used inside and out\n\nLook stunning lining your aisle or as table centre piece\n\nUse outside to add atmosphere to a terrace or bridge\n\nDecorate bottom with rose petals or similar\n\nSize 25 x 15 x 15cm\n\nPillar Candle Included (may not be new but with plenty of burn time left)\n\nTo Hire: £6.95 per Lantern\n\n£40 for six lanterns\n\n£50 for eight lanterns\n\n8 Available\n\nCost to buy / replace £29.95 per lantern"
+    "description": "A grey steel and glass storm lantern, 25 × 15 × 15cm. The enclosed candle means it works inside and out: down the aisle, on tables, or along a terrace or bridge.\n\n- Pillar candle included (may be part-used, with plenty of burn time left)\n- 6 for £40, 8 for £50; eight available"
   },
   {
     "slug": "swedish-lantern",
     "name": "Swedish Lantern",
     "price": 10.0,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "swedish-lantern-1.jpg",
       "swedish-lantern-2.jpg"
     ],
-    "description": "Beautiful, antique grey metal lantern.\n\nEnclosed flame means suitable for indoor use\n\nEach lantern is 15 x 37 cm\n\nPillar Candle Included (may not be new but with plenty of burn time left)\n\nTo Hire: £1o.oo per lantern\n\n2 Available\n\nCost to buy / replace £36.50 per lantern"
+    "description": "An antique grey metal lantern, 15 × 37cm. The enclosed flame means it's safe indoors.\n\n- Pillar candle included (may be part-used, with plenty of burn time left)\n- Two available"
   },
   {
     "slug": "silver-lantern",
     "name": "Silver Lantern",
     "price": 7.95,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "silver-lantern-1.jpg",
       "silver-lantern-2.jpg"
     ],
-    "description": "Look great outside on summer evenings, lining a bridge or dotted around a terrace\n\nGreat quality lanterns give of soft, flickering, romantic light\n\nEnclosed flame means suitable for indoor use, look stunning lining the wedding aisle\n\nEach lantern is 42cm x 15cm x 16cm (not including the handle)\n\nPillar Candle Included (may not be new but with plenty of burn time left)\n\nTo Hire: £7.95 per Lantern\n\n£45 for six lanterns\n\n£55 for eight lanterns\n\n8 Available\n\nCost to buy / replace £39.50 per lantern"
+    "description": "A quality silver lantern, 42 × 15 × 16cm, that gives off a soft, flickering light. Stunning down the aisle, along a bridge or around the terrace on a summer evening.\n\n- Pillar candle included (may be part-used, with plenty of burn time left)\n- 6 for £45, 8 for £55; eight available"
   },
   {
     "slug": "outdoor-led-hurricane-lantern",
     "name": "Outdoor LED Hurricane Lantern",
     "price": 6.0,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "outdoor-led-hurricane-lantern-1.jpg",
       "outdoor-led-hurricane-lantern-2.jpg"
     ],
-    "description": "Beautiful, antique grey metal lantern.\n\nBattery powered and equipped with a bulb\n\nGreat outdoor lighting for tables / lining a pathway or to be hung up\n\nPerfect for adding a warm glow to any setting\n\nEach lantern is 19 x 15.5 x 30 cm\n\nTo Hire: £6.oo per lantern including batteries. Set of 10 for £50\n\n12 Available\n\nCost to buy / replace £36.50 per lantern"
+    "description": "A battery-powered antique grey metal lantern, 19 × 15.5 × 30cm. Lovely on tables, lining a path or hung up.\n\n- Batteries included\n- 10 for £50; twelve available"
   },
   {
     "slug": "large-white-washed-lantern",
-    "name": "Large white washed lantern",
+    "name": "Large White-Washed Lantern",
     "price": 15.0,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "large-white-washed-lantern-1.jpg",
       "large-white-washed-lantern-2.jpg"
     ],
-    "description": "Large White Washed Wooden Lanterns\n\nEnclosed candle means can be used inside and out\n\nPerfect for framing door ways or the start of the aisle\n\nSize Height approx 80cm, Width approx 28cm\n\n1 Pillar Candles Included (may not be new but with plenty of burn time left)\n\nAlso offered as part of my ceremony room set-up package\n\n2 for £30 2 Available Cost to buy / replace £115 per lantern"
+    "description": "A large white-washed wooden lantern, about 80cm tall. Perfect framing a doorway or the start of the aisle.\n\n- Pillar candle included (may be part-used, with plenty of burn time left)\n- Also part of the Ceremony Room Set-Up\n- 2 for £30; two available"
   },
   {
     "slug": "rope-lantern",
     "name": "Rope Lantern",
     "price": 8.95,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "rope-lantern-1.jpg",
       "rope-lantern-2.jpg"
     ],
-    "description": "Looks stunning either side of venue entrance\n\nGreat for inside or out\n\nEnclosed flame means suitable for indoor use\n\nEach lantern is 25cm x 18cm\n\nTo Hire: £8.95 per Lantern\n\nOr two for £15 2 Available\n\nCost to buy / replace £35 per lantern"
+    "description": "A glass lantern with a rope handle, 25 × 18cm. Lovely either side of the entrance, inside or out.\n\n- 2 for £15; two available"
   },
   {
     "slug": "gold-rim-glass-t-light-small",
-    "name": "Gold Rim Glass T-Light – Small",
+    "name": "Gold Rim Tealight Holder",
     "price": 1.5,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "gold-rim-glass-t-light-small-1.jpg"
     ],
-    "description": "Glass Tea light holder with gold rim\n\nGives of lovely sparkling light\n\nElegant and sophisticated\n\nIdeal dotted around on each table\n\n7cm x 6cm, tea light included\n\n40 for £45\n\n40 Available Cost to buy / replace £6.95 per lantern"
+    "description": "A glass tealight holder with a gold rim, 7 × 6cm. Elegant dotted along every table.\n\n- Tealight included\n- 40 for £45; forty available"
   },
   {
     "slug": "hanging-tea-light",
-    "name": "Hanging Tea Light",
+    "name": "Hanging Tealight Holder",
     "price": 7.5,
+    "unit": "per 10",
     "group": "lanterns",
     "images": [
       "hanging-tea-light-1.jpg"
     ],
-    "description": "Sweet Tea Light holders ideal for hanging in trees\n\nPretty bells around rim\n\nEach holder is 6cm x 8cm\n\nTealight not included\n\n10 for £7.50\n\n20 for £10.50\n\n20 Available\n\nCost to buy / replace £2.95 per lantern"
+    "description": "Pretty tealight holders with little bells around the rim, made for hanging in trees. Each 6 × 8cm.\n\n- Tealights not included\n- 20 for £10.50; twenty available"
   },
   {
     "slug": "passu-hanging-tea-light",
-    "name": "Passu Hanging Tea Light",
+    "name": "Passu Hanging Tealight Holder",
     "price": 17.5,
+    "unit": "per 10",
     "group": "lanterns",
     "images": [
       "passu-hanging-tea-light-1.jpg",
@@ -610,101 +645,111 @@ window.INCABELLA_PRODUCTS = [
       "passu-hanging-tea-light-3.jpg",
       "passu-hanging-tea-light-4.jpg"
     ],
-    "description": "Sweet Tea Light holders ideal for hanging in trees\n\nDistressed White\n\nEach holder is 11cm (H) x 8cm (Dia)\n\nTakes standard t-light\n\nGives out beautifully twinkly light\n\n10 for £17.501 16 Available Cost to buy / replace £9.95 per lantern"
+    "description": "Distressed white hanging tealight holders, 11cm high, that give a beautifully twinkly light in the trees.\n\n- Takes a standard tealight\n- Sixteen available"
   },
   {
     "slug": "clear-glass-hurricane-vase",
     "name": "Clear Glass Hurricane Vase",
     "price": 6.0,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "clear-glass-hurricane-vase-1.jpg",
       "clear-glass-hurricane-vase-2.jpg"
     ],
-    "description": "Look great with pillar candles in them\n\nUse to line the aisle or as table centre pieces\n\nAdd some pretty decoration around the bottom such as pinecones or dried roses\n\nSize 27cm x 16.5cm\n\nCandle included (may be partially used)\n\nCan also be hired as part of a ceremony room set-up, please ask for details\n\nTo Hire: £6 per Lantern\n\nOr 8 for £45\n\n10 for £55\n\n10 Available\n\nCost to buy / replace £19.95 per lantern."
+    "description": "A 27 × 16.5cm hurricane vase with a pillar candle. Use to line the aisle or as a table centre piece, perhaps with pinecones or dried roses around the base.\n\n- Candle included (may be part-used)\n- 8 for £45, 10 for £55; ten available"
   },
   {
     "slug": "moroccanlantern",
     "name": "Moroccan Lantern",
     "price": 15.0,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "moroccanlantern-1.jpg"
     ],
-    "description": "Lovely Moroccan Lantern\n\nAntique finish with pretty pale blue markings on it\n\nLooks great against red brick work\n\nApprox Size Height 58cm, Width 29cm,\n\n1 Pillar Candles Included (may not be new but with plenty of burn time left)\n\n1 for £15\n\n2 Available\n\nCost to buy / replace £89.95 per lantern"
+    "description": "An antique-finish Moroccan lantern with pale blue markings, about 58cm tall. Beautiful against the Mill's red brick.\n\n- Pillar candle included (may be part-used, with plenty of burn time left)\n- Two available"
   },
   {
     "slug": "tall-cylinder-glass-vases",
-    "name": "Tall Cylinder Glass Vases",
+    "name": "Tall Cylinder Glass Vase",
     "price": 2.5,
+    "from": true,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "tall-cylinder-glass-vases-1.jpg"
     ],
-    "description": "Tall Cylinder Glass Vase\n\nThey look fantastic with candles, floating candles or fairylights inside\n\nLook great lining the aisle or as table centre pieces\n\nVarious heights available, price from £2.50 per vase depending on size,\n\nSee also as table centre piece package and ceremony room package."
+    "description": "Tall glass vases in various heights, with candles, floating candles or fairy lights inside. Lovely lining the aisle or on tables.\n\n- Price depends on size\n- Also part of the table centre piece and ceremony room packages"
   },
   {
     "slug": "ndiki-lantern",
     "name": "Ndiki Lantern",
     "price": 17.5,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "ndiki-lantern-1.jpg",
       "ndiki-lantern-2.jpg"
     ],
-    "description": "Beautiful tall antique brass lantern.\n\nEnclosed flame means suitable for indoor use\n\nEach lantern is 41 x 20 x 20cm\n\nPillar Candle Included (may not be new but with plenty of burn time left)\n\nTo Hire: £17.50 per lantern\n\n2 Available\n\nCost to buy / replace £65 per lantern"
+    "description": "A tall antique brass lantern, 41 × 20 × 20cm. The enclosed flame means it's safe indoors.\n\n- Pillar candle included (may be part-used, with plenty of burn time left)\n- Two available"
   },
   {
     "slug": "sparkling-silver-t-light-small",
-    "name": "Sparkling Silver T-Light – Small",
+    "name": "Sparkling Silver Tealight – Small",
     "price": 10.0,
+    "unit": "per 10",
     "group": "lanterns",
     "images": [
       "sparkling-silver-t-light-small-1.jpg"
     ],
-    "description": "A gorgeous T-light holder that really does sparkle\n\nRustic Silver Glass with pretty flower patternIdeal dotted around on each table\n\nMix and Match with the large ones\n\n7cm High, tea light included\n\n10 for £10\n\n20 for £18.50\n\n40 for £35\n\n20 Small, 20 Large £40\n\n40 Available\n\nCost to buy / replace £4.95 per lantern"
+    "description": "A rustic silver glass tealight holder with a flower pattern that really sparkles. 7cm high; mix and match with the large ones.\n\n- Tealights included\n- 20 for £18.50, 40 for £35\n- 20 small and 20 large together: £40"
   },
   {
     "slug": "extralargesilverlantern",
     "name": "Extra Large Silver Lantern",
     "price": 15.0,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "extralargesilverlantern-1.jpg",
       "extralargesilverlantern-2.jpg"
     ],
-    "description": "Very Large Stylish Silver Lanterns\n\nEnclosed Candle means can be used inside and out\n\nPerfect for framing door ways or the start of the aisle\n\nLooks great with group of three candles\n\nDecorate bottom with rose petals or similar\n\nSize Height 59cm, Width 30cm, Depth 31cm\n\n3 Pillar Candles Included (may not be new but with plenty of burn time left)\n\n2 for £30\n\n2 Available\n\nCost to buy / replace £89.95 per lantern"
+    "description": "A very large silver lantern, 59cm tall, with three pillar candles. Perfect framing a doorway or the start of the aisle, perhaps with rose petals around the base.\n\n- Candles included (may be part-used, with plenty of burn time left)\n- 2 for £30; two available"
   },
   {
     "slug": "hanging-heart-tea-light",
-    "name": "Hanging Heart Tea Light",
+    "name": "Hanging Heart Tealight Holder",
     "price": 7.5,
+    "unit": "per 10",
     "group": "lanterns",
     "images": [
       "hanging-heart-tea-light-1.jpg"
     ],
-    "description": "Sweet Tea Light holders ideal for hanging in trees\n\nPretty bells around rim\n\nEach holder is 6cm x 8cm\n\nTealight not included\n\n10 for £7.50\n\n20 for £10.50\n\n20 Available\n\nCost to buy / replace £2.95 per lantern"
+    "description": "Heart-shaped tealight holders for hanging in trees. Each 6 × 8cm.\n\n- Tealights not included\n- 20 for £10.50; twenty available"
   },
   {
     "slug": "mohani-lantern",
     "name": "Mohani Lantern",
     "price": 10.5,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "mohani-lantern-1.jpg",
       "mohani-lantern-2.jpg"
     ],
-    "description": "Stunning asymmetric design antique brass lantern.\n\nMakes lovely table centre piece\n\nEnclosed flame means suitable for indoor use, look stunning lining the wedding aisle\n\nEach lantern is 26 x 16cm\n\nPillar Candle Included (may not be new but with plenty of burn time left)\n\nLook great outside on summer evenings, lining a bridge or dotted around a terrace\n\nTo Hire: £10.50 per lantern\n\n£95 for ten lanterns, 12 Available\n\nCost to buy / replace £45 per lantern"
+    "description": "An asymmetric antique brass lantern, 26 × 16cm. A lovely table centre piece, and stunning lining the aisle or dotted around the terrace on a summer evening.\n\n- Pillar candle included (may be part-used, with plenty of burn time left)\n- 10 for £95; twelve available"
   },
   {
     "slug": "sparkling-silver-t-light-large",
-    "name": "Sparkling Silver T-Light – Large",
+    "name": "Sparkling Silver Tealight – Large",
     "price": 1.5,
+    "unit": "each",
     "group": "lanterns",
     "images": [
       "sparkling-silver-t-light-large-1.jpg",
       "sparkling-silver-t-light-large-2.jpg"
     ],
-    "description": "A gorgeous T-light holder that really does sparkle\n\nRustic Silver Glass with pretty flower pattern\n\nIdeal dotted around on each table\n\nMix and Match with the small ones\n\n9cm High, tea light included\n\n10 for £15\n\n20 for £25\n\n40 for £40\n\n20 Small, 20 Large £40\n\n40 Available\n\nCost to buy / replace £6.95 per lantern"
+    "description": "A rustic silver glass tealight holder with a flower pattern that really sparkles. 9cm high; mix and match with the small ones.\n\n- Tealights included\n- 10 for £15, 20 for £25, 40 for £40\n- 20 small and 20 large together: £40"
   }
 ];
