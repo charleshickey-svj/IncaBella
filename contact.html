@@ -97,6 +97,16 @@
 <script>
   (function () {
     document.querySelector("[data-social]").innerHTML = IB.socialLinks();
+
+    // On the live site, swap the drawn map for the real Google map.
+    // (The private Claude preview blocks Google Maps, so it keeps the drawn one.)
+    if (!/claude/i.test(location.hostname)) {
+      var drawn = document.querySelector(".map");
+      var live = document.createElement("div");
+      live.className = "map map--live";
+      live.innerHTML = '<iframe title="Map showing Sopley Mill, Mill Lane, Christchurch BH23 7AU" src="https://www.google.com/maps?q=Sopley+Mill,+Mill+Lane,+Sopley,+Christchurch+BH23+7AU&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>';
+      drawn.replaceWith(live);
+    }
     var form = document.getElementById("contact-form");
     var error = document.querySelector("[data-error]");
     var success = document.querySelector("[data-success]");
