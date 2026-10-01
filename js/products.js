@@ -53,8 +53,8 @@ window.INCABELLA_PRODUCTS = [
     "from": true,
     "group": "packages",
     "images": [
-      "full-decoration-package-silver-1.jpg",
       "full-decoration-package-silver-2.jpg",
+      "full-decoration-package-silver-1.jpg",
       "full-decoration-package-silver-3.jpg",
       "full-decoration-package-silver-4.jpg"
     ],
@@ -79,10 +79,10 @@ window.INCABELLA_PRODUCTS = [
     "price": 245.0,
     "group": "packages",
     "images": [
+      "ground-floor-decoration-package-4.jpg",
       "ground-floor-decoration-package-1.jpg",
       "ground-floor-decoration-package-2.jpg",
-      "ground-floor-decoration-package-3.jpg",
-      "ground-floor-decoration-package-4.jpg"
+      "ground-floor-decoration-package-3.jpg"
     ],
     "description": "Let IncaBella make the ground floor of Sopley Mill look wonderful.\n\n- The river window display (usually £95 on its own)\n- Your choice of post box, set up with flowers and tealights\n- The large heart light\n- A Moroccan lantern\n- Lots more lanterns and tealights\n- Potted flowers and small potted trees such as olives\n\nSet up on the morning of your wedding. Talk to Lucy about which flowers will be in season for your date, or about any colour scheme you have in mind."
   },
@@ -92,8 +92,8 @@ window.INCABELLA_PRODUCTS = [
     "price": 325.0,
     "group": "packages",
     "images": [
-      "outdoor-ceremony-set-up-1.jpg",
       "outdoor-ceremony-set-up-2.jpg",
+      "outdoor-ceremony-set-up-1.jpg",
       "outdoor-ceremony-set-up-3.jpg",
       "outdoor-ceremony-set-up-4.jpg"
     ],

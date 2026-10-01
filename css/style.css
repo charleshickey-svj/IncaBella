@@ -270,7 +270,7 @@ p { margin: 0; }
 .packages { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 3vw, 40px); }
 .package { display: grid; gap: 14px; text-decoration: none; align-content: start; }
 .package .ph { overflow: hidden; }
-.package img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
+.package img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 1.2s cubic-bezier(.2,.7,.2,1); }
 .package:hover img { transform: scale(1.04); }
 .package h3 { font-size: var(--step-2); }
 .package .price { color: var(--muted); }
