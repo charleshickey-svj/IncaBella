@@ -133,7 +133,7 @@
       "<div><h3>Address</h3><address>" + CONTACT.address.join("<br>") + "</address></div>" +
       '<div><h3>Contact</h3><ul><li><a href="mailto:' + CONTACT.email + '">' + CONTACT.email + '</a></li><li><a href="tel:' + CONTACT.phoneHref + '">' + CONTACT.phone + "</a></li></ul></div>" +
       '<div><h3>Explore</h3><ul><li><a href="hire.html">Hire collection</a></li><li><a href="flowers.html">Flowers</a></li><li><a href="list.html">My list</a></li><li><a href="' + CONTACT.sopley + '" target="_blank" rel="noopener">Sopley Mill</a></li></ul></div>' +
-      '</div><div class="footer-bottom"><span>© ' + new Date().getFullYear() + ' IncaBella Floristry &amp; Wedding Hire</span><span>Sister company to Sopley Mill</span></div></div></footer>';
+      '</div><div class="footer-bottom"><span>© ' + new Date().getFullYear() + ' IncaBella Floristry &amp; Wedding Hire</span><span>Weddings at Sopley Mill, Christchurch</span></div></div></footer>';
   }
 
   function refreshCounts() {

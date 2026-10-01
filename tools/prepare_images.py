@@ -50,6 +50,14 @@ SITE = {
     "firepit-night": "_site/IMG_1713.jpg",
     "mill-lawn": "_site/giant-outdoor-chess.jpg",
     "potted-aisle": "extra/potted-aisle.webp",
+    "jars-on-bench": "extra/flowers/jars-on-bench.webp",
+    "potted-violas-thyme": "extra/flowers/potted-violas-thyme.webp",
+    "nigella-closeup": "extra/flowers/nigella-closeup.webp",
+    "crate-display-mill": "extra/flowers/crate-display-mill.webp",
+    "wildflower-bouquet": "extra/flowers/wildflower-bouquet.webp",
+    "delphinium-bouquet": "extra/flowers/delphinium-bouquet.webp",
+    "white-daisy-vase": "extra/flowers/white-daisy-vase.webp",
+    "riverside-bouquet": "extra/flowers/riverside-bouquet.webp",
     "logo": "_site/IncaBella_logo_02.png",
 }
 
