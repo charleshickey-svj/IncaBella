@@ -17,6 +17,7 @@ function ib_site_pages() {
 		'hire'    => 'Hire',
 		'gallery' => 'Gallery',
 		'contact' => 'Contact',
+		'list'    => 'My list',
 	);
 }
 
@@ -67,7 +68,7 @@ function ib_setup_notice() {
 	$url = wp_nonce_url( admin_url( 'admin-post.php?action=ib_setup' ), 'ib_setup' );
 	?>
 	<div class="notice notice-info">
-		<p><strong>Finish setting up IncaBella.</strong> This creates the Home, About, Flowers, Hire, Gallery and Contact pages (or uses yours if they already exist), loads all 60 hire items with their prices and photos, and makes Home your front page.</p>
+		<p><strong>Finish setting up IncaBella.</strong> This creates the Home, About, Flowers, Hire, Gallery, Contact and My list pages (or uses yours if they already exist), loads all 60 hire items with their prices and photos, and makes Home your front page.</p>
 		<p><a class="button button-primary" href="<?php echo esc_url( $url ); ?>">Set up IncaBella</a></p>
 	</div>
 	<?php
@@ -108,6 +109,7 @@ function ib_do_setup() {
 
 	ib_import_products();
 	update_option( 'ib_setup_done', 1 );
+	update_option( 'ib_list_page_done', 1 );
 	flush_rewrite_rules();
 }
 

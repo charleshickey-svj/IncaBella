@@ -24,7 +24,7 @@ foreach ( ib_get_products() as $p ) {
   <section class="section">
     <div class="wrap">
       <div class="section-head">
-        <p class="lede">Find what you love, then send Lucy an enquiry. She'll confirm what's available for your date and send you a quote. Each price shows what it covers, such as per table or per 10.</p>
+        <p class="lede">Add what you love to your list, then send it to Lucy with your wedding date. She'll confirm what's available for your date and send you a quote. Each price shows what it covers, such as per table or per 10.</p>
       </div>
       <div class="filters" role="group" aria-label="Show a category" data-filters>
         <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>

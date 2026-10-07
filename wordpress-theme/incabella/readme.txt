@@ -18,10 +18,11 @@ License: GPLv2 or later
 * Appearance → Customise → IncaBella: contact details, every page photo
   (including the home page slideshow) and reviews.
 * Pages → Gallery: the "Gallery photos" box.
-* Enquiries (dashboard menu): every message sent through the Contact page.
+* Enquiries (dashboard menu): every message sent through the Contact page and
+  every wedding list sent from My list.
 
 == Emails ==
-Enquiries are emailed to the address in Customise → IncaBella → Contact details
+Enquiries and wedding lists are emailed to the address in Customise → IncaBella → Contact details
 and also saved under Enquiries. If emails don't arrive, install the free
 "WP Mail SMTP" plugin and connect it to the email account.
 

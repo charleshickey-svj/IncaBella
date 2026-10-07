@@ -1,6 +1,6 @@
 <?php
 /**
- * Site header: top bar, logo, menu and "Enquire" button.
+ * Site header: top bar, logo, menu and "My list" button.
  *
  * @package IncaBella
  */
@@ -32,10 +32,10 @@ $ib_nav     = array(
 				<li><a href="<?php echo esc_url( ib_page_url( $slug ) ); ?>"<?php echo $slug === $ib_current ? ' aria-current="page"' : ''; ?>><?php echo esc_html( $label ); ?></a></li>
 			<?php endforeach; ?>
 		</ul>
-		<a class="list-btn" href="<?php echo esc_url( ib_enquire_url() ); ?>"><span class="label">Enquire</span></a>
+		<a class="list-btn" href="<?php echo esc_url( ib_page_url( 'list' ) ); ?>"<?php echo 'list' === $ib_current ? ' aria-current="page"' : ''; ?>><span class="label">My list</span><span class="list-count" data-count="0" aria-label="0 items">0</span></a>
 	</nav>
 	<div class="header-actions">
-		<a class="list-btn list-btn--compact" href="<?php echo esc_url( ib_enquire_url() ); ?>"><span class="label">Enquire</span></a>
+		<a class="list-btn list-btn--compact" href="<?php echo esc_url( ib_page_url( 'list' ) ); ?>"<?php echo 'list' === $ib_current ? ' aria-current="page"' : ''; ?>><span class="label">My list</span><span class="list-count" data-count="0" aria-label="0 items">0</span></a>
 		<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span><span class="visually-hidden">Menu</span></button>
 	</div>
 </div></header>

@@ -223,7 +223,7 @@ function ib_product_card( $p, $reveal = true ) {
 	$name = get_the_title( $p );
 	ob_start();
 	?>
-	<article class="card<?php echo $reveal ? ' reveal' : ''; ?>"><a class="card-link" href="<?php echo esc_url( get_permalink( $p ) ); ?>"><div class="ph"><img src="<?php echo esc_url( ib_product_photo_url( $p->ID ) ); ?>" alt="<?php echo esc_attr( $name ); ?>" loading="lazy"></div><h3><?php echo esc_html( $name ); ?></h3></a><p class="price"><?php echo wp_kses_post( ib_price_label( $p->ID ) ); ?></p><a class="add-btn" href="<?php echo esc_url( ib_enquire_url( array( 'item' => $p->ID ) ) ); ?>"><?php echo ib_arrow(); // phpcs:ignore WordPress.Security.EscapeOutput ?>Enquire</a></article>
+	<article class="card<?php echo $reveal ? ' reveal' : ''; ?>"><a class="card-link" href="<?php echo esc_url( get_permalink( $p ) ); ?>"><div class="ph"><img src="<?php echo esc_url( ib_product_photo_url( $p->ID ) ); ?>" alt="<?php echo esc_attr( $name ); ?>" loading="lazy"></div><h3><?php echo esc_html( $name ); ?></h3></a><p class="price"><?php echo wp_kses_post( ib_price_label( $p->ID ) ); ?></p><?php echo ib_add_button( $p->ID ); // phpcs:ignore WordPress.Security.EscapeOutput ?></article>
 	<?php
 	return trim( ob_get_clean() );
 }

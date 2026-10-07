@@ -15,7 +15,7 @@ $ib_email = ib_opt( 'email' );
 	</div>
 	<div><h3>Address</h3><address><?php echo ib_address_html(); // phpcs:ignore WordPress.Security.EscapeOutput ?></address></div>
 	<div><h3>Contact</h3><ul><li><a href="mailto:<?php echo esc_attr( $ib_email ); ?>"><?php echo esc_html( $ib_email ); ?></a></li><li><a href="<?php echo esc_attr( ib_phone_href() ); ?>"><?php echo esc_html( ib_opt( 'phone' ) ); ?></a></li></ul></div>
-	<div><h3>Explore</h3><ul><li><a href="<?php echo esc_url( ib_page_url( 'hire' ) ); ?>">Hire collection</a></li><li><a href="<?php echo esc_url( ib_page_url( 'flowers' ) ); ?>">Flowers</a></li><li><a href="<?php echo esc_url( ib_enquire_url() ); ?>">Send an enquiry</a></li><li><a href="https://sopleymill.co.uk/" target="_blank" rel="noopener">Sopley Mill</a></li></ul></div>
+	<div><h3>Explore</h3><ul><li><a href="<?php echo esc_url( ib_page_url( 'hire' ) ); ?>">Hire collection</a></li><li><a href="<?php echo esc_url( ib_page_url( 'flowers' ) ); ?>">Flowers</a></li><li><a href="<?php echo esc_url( ib_page_url( 'list' ) ); ?>">My list</a></li><li><a href="<?php echo esc_url( ib_enquire_url() ); ?>">Send an enquiry</a></li><li><a href="https://sopleymill.co.uk/" target="_blank" rel="noopener">Sopley Mill</a></li></ul></div>
 </div><div class="footer-bottom"><span>© <?php echo esc_html( wp_date( 'Y' ) ); ?> IncaBella Floristry &amp; Wedding Hire</span><span>Weddings at Sopley Mill, Christchurch</span></div></div></footer>
 <?php wp_footer(); ?>
 </body>

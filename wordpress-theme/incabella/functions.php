@@ -13,6 +13,7 @@ require get_template_directory() . '/inc/helpers.php';
 require get_template_directory() . '/inc/products.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/enquiry.php';
+require get_template_directory() . '/inc/list.php';
 require get_template_directory() . '/inc/setup-content.php';
 
 add_action( 'after_setup_theme', 'ib_setup' );
@@ -62,6 +63,7 @@ function ib_meta_description() {
 		'hire'    => 'Hire lanterns, fairy lights, props, garden games and decoration packages for your wedding at Sopley Mill.',
 		'gallery' => 'Weddings at Sopley Mill styled by IncaBella.',
 		'contact' => 'Contact Lucy at IncaBella about wedding flowers and hire at Sopley Mill.',
+		'list'    => 'Your wedding list for IncaBella hire at Sopley Mill.',
 	);
 	$slug = ib_current_section();
 	return isset( $map[ $slug ] ) ? $map[ $slug ] : '';

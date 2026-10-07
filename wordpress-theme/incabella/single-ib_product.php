@@ -1,6 +1,6 @@
 <?php
 /**
- * One hire item: photos, price, description and an "Enquire" button.
+ * One hire item: photos, price, description, quantity and "Add to my list".
  *
  * @package IncaBella
  */
@@ -42,9 +42,12 @@ while ( have_posts() ) :
         <h1><?php echo esc_html( $ib_name ); ?></h1>
         <p class="price"><?php echo wp_kses_post( ib_price_label( $ib_id ) ); ?></p>
         <div class="desc"><?php the_content(); ?></div>
-        <div class="qty-row"><a class="btn" href="<?php echo esc_url( ib_enquire_url( array( 'item' => $ib_id ) ) ); ?>">Enquire about this item</a></div>
-        <p class="note">Lucy will confirm availability for your wedding date and send you a quote. There's nothing to pay yet.</p>
-        <p><a class="text-link" href="<?php echo esc_url( ib_page_url( 'hire' ) ); ?>">Back to the hire collection</a></p>
+        <div class="qty-row">
+          <span class="qty"><button type="button" data-step="-1" aria-label="One fewer">−</button><input id="qty" type="number" inputmode="numeric" min="1" max="999" value="1" aria-label="Quantity"><button type="button" data-step="1" aria-label="One more">+</button></span>
+          <?php echo ib_add_button( $ib_id, '#qty' ); // phpcs:ignore WordPress.Security.EscapeOutput ?>
+        </div>
+        <p class="note">Add everything you'd like to your list, then send it to Lucy with your wedding date. She'll confirm availability and send you a quote. There's nothing to pay yet.</p>
+        <p><a class="text-link" href="<?php echo esc_url( ib_enquire_url( array( 'item' => $ib_id ) ) ); ?>">Ask Lucy a question about this item</a> &nbsp; <a class="text-link" href="<?php echo esc_url( ib_page_url( 'hire' ) ); ?>">Back to the hire collection</a></p>
       </div>
     </div>
   </div>

@@ -1,4 +1,4 @@
-/* IncaBella: menu, page effects, hero slideshow, hire filters, product photos, gallery and enquiry form. */
+/* IncaBella: menu, page effects, hero slideshow, hire filters, product photos, gallery, enquiry form and "My list". */
 (function () {
   "use strict";
 
@@ -212,7 +212,181 @@
     });
   }
 
+  /* ---------- My list (kept in this browser, keyed by hire item ID) ---------- */
+  var KEY = "incabella-list", memory = {};
+  function read() {
+    try { var l = JSON.parse(localStorage.getItem(KEY) || "{}"); return l && typeof l === "object" ? l : {}; }
+    catch (e) { return memory; }
+  }
+  function write(list) {
+    memory = list;
+    try { localStorage.setItem(KEY, JSON.stringify(list)); } catch (e) { /* private browsing: keep it for this visit */ }
+    document.dispatchEvent(new CustomEvent("listchange"));
+  }
+  var List = {
+    items: function () { return read(); },
+    qty: function (id) { return read()[id] || 0; },
+    set: function (id, qty) {
+      var l = read();
+      qty = Math.max(0, Math.min(999, Math.round(qty) || 0));
+      if (qty) l[id] = qty; else delete l[id];
+      write(l);
+    },
+    add: function (id, n) { List.set(id, List.qty(id) + (n || 1)); },
+    clear: function () { write({}); },
+    count: function () { var l = read(), c = 0; for (var k in l) c += l[k]; return c; }
+  };
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function money(n) { return "£" + n.toLocaleString("en-GB", { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }); }
+  function listUrl() { var a = document.querySelector("a.list-btn"); return a ? a.href : "#"; }
+
+  var PLUS = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5"/></svg>';
+  var TICK = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 8.5 3 3 7-7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>';
+  function syncAddButton(btn) {
+    var q = List.qty(btn.dataset.add);
+    btn.classList.toggle("is-added", q > 0);
+    btn.innerHTML = q > 0 ? TICK + "In my list" + (q > 1 ? " (" + q + ")" : "") : PLUS + "Add to my list";
+  }
+  function refreshCounts() {
+    var n = List.count();
+    document.querySelectorAll(".list-count").forEach(function (c) {
+      if (c.textContent !== String(n)) { c.classList.remove("bump"); void c.offsetWidth; c.classList.add("bump"); }
+      c.textContent = n; c.dataset.count = n; c.setAttribute("aria-label", n + (n === 1 ? " item" : " items"));
+    });
+    document.querySelectorAll("[data-add]").forEach(syncAddButton);
+  }
+  function setupList() {
+    document.querySelectorAll(".list-count").forEach(function (c) { var n = List.count(); c.textContent = n; c.dataset.count = n; c.setAttribute("aria-label", n + (n === 1 ? " item" : " items")); });
+    document.querySelectorAll("[data-add]").forEach(syncAddButton);
+    document.addEventListener("listchange", refreshCounts);
+    window.addEventListener("storage", function (e) { if (e.key === KEY) refreshCounts(); });
+
+    document.addEventListener("click", function (e) {
+      var step = e.target.closest(".qty-row [data-step]");
+      if (step) {
+        var q = document.getElementById("qty");
+        q.value = Math.max(1, Math.min(999, (parseInt(q.value, 10) || 1) + +step.dataset.step));
+        return;
+      }
+      var btn = e.target.closest("[data-add]");
+      if (!btn) return;
+      e.preventDefault();
+      var qtyInput = btn.dataset.qtyFrom && document.querySelector(btn.dataset.qtyFrom);
+      var n = qtyInput ? Math.max(1, parseInt(qtyInput.value, 10) || 1) : 1;
+      List.add(btn.dataset.add, n);
+      showToast(btn.dataset.name, btn.dataset.img, n);
+    });
+  }
+
+  /* ---------- "Added to your list" panel, bottom right ---------- */
+  var toast, toastTimer;
+  function showToast(name, img, n) {
+    if (!toast) {
+      toast = document.createElement("div");
+      toast.className = "toast";
+      toast.setAttribute("role", "status");
+      document.body.appendChild(toast);
+      toast.addEventListener("click", function (e) { if (e.target.closest(".toast-close")) hideToast(); });
+      toast.addEventListener("mouseenter", function () { clearTimeout(toastTimer); });
+      toast.addEventListener("mouseleave", function () { toastTimer = setTimeout(hideToast, 2500); });
+    }
+    toast.innerHTML = '<img src="' + esc(img || "") + '" alt="">' +
+      '<div class="toast-body"><p class="toast-title">Added to your list</p><p>' + (n > 1 ? n + " × " : "") + esc(name || "") + "</p>" +
+      '<a class="text-link" href="' + esc(listUrl()) + '">View my list</a></div>' +
+      '<button class="toast-close" type="button" aria-label="Close">×</button>';
+    toast.classList.remove("is-shown");
+    void toast.offsetWidth;
+    toast.classList.add("is-shown");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(hideToast, 4500);
+  }
+  function hideToast() { if (toast) toast.classList.remove("is-shown"); }
+
+  /* ---------- My list page ---------- */
+  function setupListPage() {
+    if (document.querySelector("[data-list-sent]")) { List.clear(); return; }
+    var box = document.querySelector("[data-list]"), form = document.getElementById("list-form");
+    if (!box || !form) return;
+    var cat = {};
+    try { JSON.parse(document.getElementById("ib-catalogue").textContent).forEach(function (p) { cat[p.id] = p; }); } catch (e) { /* no items */ }
+    var error = form.querySelector("[data-error]");
+
+    // Items Lucy has since hidden or deleted drop out of the list.
+    var stored = List.items();
+    Object.keys(stored).forEach(function (id) { if (!cat[id]) delete stored[id]; });
+    if (Object.keys(stored).length !== Object.keys(List.items()).length) write(stored);
+
+    function lines() {
+      var items = List.items();
+      return Object.keys(items).filter(function (id) { return cat[id]; }).map(function (id) { return { p: cat[id], qty: items[id] }; });
+    }
+    function render() {
+      var ls = lines();
+      if (!ls.length) {
+        box.innerHTML = '<div class="empty"><p class="script" style="font-size:3.2rem">Nothing here yet</p>' +
+          "<p>Browse the hire collection and tap “Add to my list” on anything you'd like for your day.</p>" +
+          '<div class="btn-row"><a class="btn" href="' + esc(box.dataset.hire) + '">Browse the hire collection</a><a class="btn" href="' + esc(box.dataset.flowers) + '">Flowers</a></div></div>';
+        return;
+      }
+      var total = 0, from = false;
+      box.innerHTML = '<ul class="list-items">' + ls.map(function (l) {
+        var p = l.p, line = p.price * l.qty;
+        total += line; from = from || p.from;
+        return '<li class="list-item"><a href="' + esc(p.url) + '"><img class="is-loaded" src="' + esc(p.img) + '" alt=""></a>' +
+          '<div><h3><a href="' + esc(p.url) + '">' + esc(p.name) + "</a></h3>" +
+          '<div class="meta"><span>' + (p.from ? "From " : "") + money(p.price) + " " + esc(p.unit || "each") + "</span>" +
+          '<span class="qty"><button type="button" data-dec="' + p.id + '" aria-label="One fewer ' + esc(p.name) + '">−</button>' +
+          '<input type="number" inputmode="numeric" min="1" max="999" value="' + l.qty + '" data-qty="' + p.id + '" aria-label="Quantity of ' + esc(p.name) + '">' +
+          '<button type="button" data-inc="' + p.id + '" aria-label="One more ' + esc(p.name) + '">+</button></span>' +
+          '<button class="remove" type="button" data-remove="' + p.id + '">Remove</button></div></div>' +
+          '<span class="line-total">' + money(line) + "</span></li>";
+      }).join("") + "</ul>" +
+        '<div class="list-total"><span class="kicker">Estimated total</span><strong>' + (from ? "From " : "") + money(total) + "</strong></div>" +
+        "<p>Lucy will confirm your final price, including any multi-buy savings.</p>" +
+        '<p style="margin-top:24px"><a class="text-link" href="' + esc(box.dataset.hire) + '">Add more items</a></p>';
+    }
+
+    box.addEventListener("click", function (e) {
+      var t = e.target.closest("button");
+      if (!t) return;
+      if (t.dataset.inc) List.add(t.dataset.inc, 1);
+      if (t.dataset.dec) List.set(t.dataset.dec, Math.max(1, List.qty(t.dataset.dec) - 1));
+      if (t.dataset.remove) List.set(t.dataset.remove, 0);
+    });
+    box.addEventListener("change", function (e) {
+      if (e.target.dataset.qty) List.set(e.target.dataset.qty, Math.max(1, parseInt(e.target.value, 10) || 1));
+    });
+    document.addEventListener("listchange", render);
+    render();
+
+    form.addEventListener("submit", function (e) {
+      form.querySelectorAll("[aria-invalid]").forEach(function (f) { f.removeAttribute("aria-invalid"); });
+      var missing = [].slice.call(form.querySelectorAll("[required]")).filter(function (f) { return !f.value.trim() || !f.checkValidity(); });
+      var fail = "";
+      if (!lines().length && !form.flowers.checked) fail = "Your list is empty. Add some items from the hire collection, or tick the flowers box, before sending.";
+      else if (missing.length) {
+        missing.forEach(function (f) { f.setAttribute("aria-invalid", "true"); });
+        fail = "Please fill in " + missing.map(function (f) { return form.querySelector('label[for="' + f.id + '"]').textContent.toLowerCase(); }).join(", ") + ".";
+      }
+      if (fail) {
+        e.preventDefault();
+        error.textContent = fail; error.hidden = false;
+        if (missing.length) missing[0].focus();
+        return;
+      }
+      error.hidden = true;
+      var items = {};
+      lines().forEach(function (l) { items[l.p.id] = l.qty; });
+      form.querySelector("[name=items]").value = JSON.stringify(items);
+      var btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true; btn.textContent = "Sending…";
+    });
+  }
+
   setupHeader();
+  setupList();
+  setupListPage();
   setupSlides();
   setupFilters();
   setupThumbs();
