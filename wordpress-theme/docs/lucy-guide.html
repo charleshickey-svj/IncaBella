@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Updating your IncaBella website</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Gilda+Display&family=Mrs+Saint+Delafield&display=swap">
+<style>
+  @page { size: A4; margin: 13mm 15mm 11mm; }
+  :root { --ink:#3d3c38; --muted:#6b6a63; --olive:#7a7f55; --rose:#b4847f; --mist:#f3f4ee; --line:#d9d9d0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: Figtree, "Segoe UI", Arial, sans-serif; font-size: 9.8pt; line-height: 1.42; color: var(--ink); background: #fff; }
+  .script { font-family: "Mrs Saint Delafield", cursive; font-size: 30pt; line-height: 1; color: var(--ink); margin: 0; }
+  h1 { font-family: "Gilda Display", Georgia, serif; font-weight: 400; font-size: 21pt; margin: 0 0 3pt; }
+  .lede { color: var(--muted); margin: 0 0 9pt; max-width: 62ch; }
+  h2 { font-family: "Gilda Display", Georgia, serif; font-weight: 400; font-size: 14pt; margin: 0 0 4pt; display: flex; align-items: center; gap: 8pt; }
+  h2 .n { display: inline-grid; place-items: center; width: 20pt; height: 20pt; border-radius: 50%; background: var(--olive); color: #fff; font-family: Figtree, sans-serif; font-size: 10pt; font-weight: 600; flex: none; }
+  .card { border: 1px solid var(--line); border-left: 3px solid var(--olive); padding: 8pt 11pt; margin: 0 0 8pt; break-inside: avoid; }
+  ol, ul { margin: 0; padding-left: 15pt; }
+  li { margin: 1pt 0; }
+  b { font-weight: 600; }
+  .path { font-weight: 600; color: var(--olive); }
+  .tip { background: var(--mist); padding: 5pt 9pt; margin-top: 5pt; font-size: 9pt; color: var(--muted); border-left: 2px solid var(--rose); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 9pt; }
+  .grid .card p { margin: 0; }
+  .small h2 { font-size: 12.5pt; }
+  .page2 { break-before: page; }
+  .kicker { font-size: 8pt; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; color: var(--muted); margin: 0 0 8pt; }
+  footer { margin-top: 10pt; font-size: 8.5pt; color: var(--muted); border-top: 1px dotted var(--line); padding-top: 6pt; }
+</style>
+</head>
+<body>
+  <p class="script">Hello Lucy</p>
+  <h1>Updating your IncaBella website</h1>
+  <p class="lede">Everything below is done from your WordPress dashboard. Log in at <b>your-website-address/wp-admin</b> with your usual username and password. Nothing you change here can break the design, so feel free to experiment.</p>
+
+  <div class="card">
+    <h2><span class="n">1</span>Change a price</h2>
+    <ol>
+      <li>In the menu on the left, click <span class="path">Hire items</span>. You'll see every item with its photo and price.</li>
+      <li>Click the name of the item you want to change.</li>
+      <li>On the right, find the <b>Price &amp; details</b> box. Type the new number in <b>Price (£)</b>, for example <i>25</i> or <i>6.95</i>. There's no need to type the £ sign.</li>
+      <li>Change <b>Shown after the price</b> if you need to, for example <i>each</i>, <i>per table</i> or <i>per 10</i>.</li>
+      <li>Click the blue <b>Save</b> button at the top right. The website updates straight away.</li>
+    </ol>
+    <div class="tip">Tick <b>Show “From” before the price</b> for packages where the price can vary. Prices mentioned inside the description, such as “Add greenery for £75”, are changed by editing that text on the left.</div>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">2</span>Swap a hire item's photo</h2>
+    <ol>
+      <li>Open the item from <span class="path">Hire items</span>, as above.</li>
+      <li>On the right, scroll to the <b>Photos</b> box. The photo with the green border is the <b>main photo</b> shown on the Hire page.</li>
+      <li>Click <b>Add photos</b>. Either drag a new photo from your computer onto the window, or pick one from your Media Library. Then click <b>Add these photos</b>.</li>
+      <li>Drag your new photo to the <b>first place</b> to make it the main one. Click the <b>×</b> on any photo you no longer want.</li>
+      <li>Click <b>Save</b>.</li>
+    </ol>
+    <div class="tip">When you upload a photo, fill in <b>Alternative text</b> on the right with a short description (e.g. “White roses and daisies in a glass vase”). It helps Google and people using screen readers.</div>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">3</span>Swap a page photo or the home page slideshow</h2>
+    <ol>
+      <li>Go to <span class="path">Appearance → Customise → IncaBella</span>.</li>
+      <li>Choose the page: <b>Home page photos</b>, <b>Flowers page photos</b>, <b>Hire page photo</b> or <b>About page photos</b>. Each photo on the page is listed with its current picture.</li>
+      <li>Click <b>Change image</b> under the one you want to replace, then pick or upload a photo. You'll see it on the preview straight away.</li>
+      <li>Click the blue <b>Publish</b> button at the top. To go back to the original photo, click <b>Remove</b>, then Publish.</li>
+    </ol>
+    <div class="tip">For the big banners and the slideshow, use landscape photos at least 1600 pixels wide. Photos straight from your phone are perfect; Instagram copies can look soft at that size.</div>
+  </div>
+
+  <div class="page2">
+    <p class="kicker">Other handy things</p>
+    <div class="grid small">
+      <div class="card"><h2>Add a new hire item</h2><p><span class="path">Hire items → Add hire item</span>. Type the name and description, then fill in Price &amp; details, choose its category, add photos, and click <b>Publish</b>.</p></div>
+      <div class="card"><h2>Hide an item for now</h2><p>Open it, click <b>Published</b> in the right-hand panel and switch it to <b>Draft</b>. It disappears from the website but isn't deleted.</p></div>
+      <div class="card"><h2>Change the order</h2><p>In <span class="path">Hire items</span>, hover over an item and click <b>Quick Edit</b>. Items with a lower <b>Order</b> number appear first within their category.</p></div>
+      <div class="card"><h2>Home page packages</h2><p>Tick <b>Feature on the home page</b> in an item's Price &amp; details box. Up to three featured items show in “Decoration packages”.</p></div>
+      <div class="card"><h2>Enquiries</h2><p>Every message from the Contact page is emailed to you, and a copy is kept under <span class="path">Enquiries</span>, so nothing is ever lost. Just reply to the email to answer the couple.</p></div>
+      <div class="card"><h2>Contact details</h2><p><span class="path">Appearance → Customise → IncaBella → Contact details</span>: your email (where enquiries go), phone, address, Instagram and Facebook.</p></div>
+      <div class="card"><h2>Reviews</h2><p><span class="path">Customise → IncaBella → Reviews</span>. Add up to three real reviews from couples. The “Kind words” section appears on the home page once one is filled in.</p></div>
+      <div class="card"><h2>Gallery photos</h2><p><span class="path">Pages → Gallery</span>. Use the <b>Gallery photos</b> box: Add photos, drag to reorder, × to remove, then <b>Save</b>.</p></div>
+    </div>
+
+    <p class="kicker" style="margin-top:6pt">If something isn't working</p>
+    <div class="card">
+      <ul>
+        <li><b>Enquiry emails aren't arriving:</b> check <span class="path">Enquiries</span>. Every message is there, and the “Emailed to you” column says whether the email went. If it says it failed, install the free <b>WP Mail SMTP</b> plugin and connect it to your email account.</li>
+        <li><b>A page shows “Page not found”:</b> go to <span class="path">Settings → Permalinks</span> and click <b>Save Changes</b> without changing anything.</li>
+        <li><b>A change doesn't show:</b> refresh the page. If your website uses a caching plugin, clear its cache.</li>
+      </ul>
+    </div>
+    <footer>IncaBella WordPress theme 1.0 · Hire items, prices and photos: “Hire items” menu · Page photos, contact details and reviews: Appearance → Customise → IncaBella</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,940 @@
+{
+ "groups": [
+  {
+   "id": "packages",
+   "name": "Packages",
+   "blurb": "Let Lucy style a whole room, the ceremony or your tables."
+  },
+  {
+   "id": "lanterns",
+   "name": "Lanterns & candles",
+   "blurb": "Lanterns, tealights and vases for tables, aisles and trees."
+  },
+  {
+   "id": "lights",
+   "name": "Lights",
+   "blurb": "Fairy lights and light-up letters, fitted by Lucy."
+  },
+  {
+   "id": "props",
+   "name": "Props & décor",
+   "blurb": "Post boxes, crates, churns and the finishing details."
+  },
+  {
+   "id": "outdoor",
+   "name": "Outdoor & greenery",
+   "blurb": "Firepit, hay bales and potted olive trees."
+  },
+  {
+   "id": "games",
+   "name": "Garden games & kids",
+   "blurb": "Giant games for the lawn and a play tent for little guests."
+  }
+ ],
+ "products": [
+  {
+   "slug": "full-decoration-package-silver",
+   "title": "Full Decoration Package – Tier 1",
+   "price": 695,
+   "unit": "",
+   "from": true,
+   "group": "packages",
+   "featured": true,
+   "order": 0,
+   "photos": [
+    "t:products/full-decoration-package-silver-2.jpg",
+    "t:products/full-decoration-package-silver-1.jpg",
+    "t:products/full-decoration-package-silver-3.jpg",
+    "t:products/full-decoration-package-silver-4.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Take the stress out of doing it yourself and let IncaBella decorate all three floors of the Mill.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Ground floor</h3>\n<!-- /wp:heading -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>The river window display</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Your choice of post box</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Lots of lanterns, tealights, crates and potted flowers</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Ceremony room</h3>\n<!-- /wp:heading -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Each corner of the stage: a large white wooden lantern on a crate, with at least five tall glass vases or hurricane lanterns, all with candles and fresh greenery</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Down the aisle: a Mohani lantern or large glass hurricane lamp on a log slice at the end of every other row</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Prefer an outdoor ceremony? Add £50</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Tables</h3>\n<!-- /wp:heading -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Lucy moves your aisle ends up to become your table centre pieces, with a table number frame and tealights on each table</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Based on 8–10 round tables, or 8 round tables and a top table two tables long</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:paragraph -->\n<p>Optional extras at additional cost: greenery garlands, chair sashes, fairy lights, garden games, the firepit, extra flowers, bouquets and buttonholes.</p>\n<!-- /wp:paragraph -->"
+  },
+  {
+   "slug": "full-decoration-package-tier-2",
+   "title": "Full Decoration Package – Tier 2",
+   "price": 1000,
+   "unit": "",
+   "from": true,
+   "group": "packages",
+   "featured": false,
+   "order": 1,
+   "photos": [
+    "t:products/full-decoration-package-tier-2-1.jpg",
+    "t:products/full-decoration-package-tier-2-2.jpg",
+    "t:products/full-decoration-package-tier-2-3.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Everything in Tier 1, plus fairy lights, chair sashes and a greenery runner. IncaBella decorates all three floors of the Mill.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Ground floor</h3>\n<!-- /wp:heading -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>The river window display</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Your choice of post box</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Lots of lanterns, tealights, crates and potted flowers</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Ceremony room</h3>\n<!-- /wp:heading -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Each corner of the stage: a large white wooden lantern on a crate, with at least five tall glass vases or hurricane lanterns, all with candles and fresh greenery</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Down the aisle: a Mohani lantern or large glass hurricane lamp on a log slice at the end of every other row, and a white sash on each aisle-end chair</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>A net of fairy lights along the back wall and fairy lights zig-zagged across the ceiling</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Tables</h3>\n<!-- /wp:heading -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Lucy moves your aisle ends up to become your table centre pieces, with a table number frame and tealights on each table</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>A greenery runner along the top table</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Based on 8–10 round tables, or 8 round tables and a top table two tables long</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:paragraph -->\n<p>Optional extras at additional cost: greenery garlands, aisle runner, wooden arch, garden games, the firepit, extra flowers, bouquets and buttonholes.</p>\n<!-- /wp:paragraph -->"
+  },
+  {
+   "slug": "ground-floor-decoration-package",
+   "title": "Ground Floor Decoration Package",
+   "price": 245,
+   "unit": "",
+   "from": false,
+   "group": "packages",
+   "featured": true,
+   "order": 2,
+   "photos": [
+    "t:products/ground-floor-decoration-package-4.jpg",
+    "t:products/ground-floor-decoration-package-1.jpg",
+    "t:products/ground-floor-decoration-package-2.jpg",
+    "t:products/ground-floor-decoration-package-3.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Let IncaBella make the ground floor of Sopley Mill look wonderful.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>The river window display (usually £95 on its own)</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Your choice of post box, set up with flowers and tealights</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>The large heart light</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>A Moroccan lantern</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Lots more lanterns and tealights</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Potted flowers and small potted trees such as olives</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:paragraph -->\n<p>Set up on the morning of your wedding. Talk to Lucy about which flowers will be in season for your date, or about any colour scheme you have in mind.</p>\n<!-- /wp:paragraph -->"
+  },
+  {
+   "slug": "outdoor-ceremony-set-up",
+   "title": "Outdoor Ceremony Set-Up",
+   "price": 325,
+   "unit": "",
+   "from": false,
+   "group": "packages",
+   "featured": true,
+   "order": 3,
+   "photos": [
+    "t:products/outdoor-ceremony-set-up-2.jpg",
+    "t:products/outdoor-ceremony-set-up-1.jpg",
+    "t:products/outdoor-ceremony-set-up-3.jpg",
+    "t:products/outdoor-ceremony-set-up-4.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A beautiful, rustic dressing for an outdoor ceremony.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Each corner by the signing table decorated with crates, cut logs, lanterns and potted flowers</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>A mix of potted flowers and lanterns at each bench end down the aisle</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Two large potted olive trees</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:paragraph -->\n<p>Add the wooden arch with billowing white fabric for £165.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Set up on the morning of your wedding and tailored to you, for example swapping one lantern style for another. Exact potted flowers depend on what's growing at the time.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Once it's set up outside it can't be moved in if the weather changes. Lucy can set it up inside instead if you let her know by the evening before.</p>\n<!-- /wp:paragraph -->"
+  },
+  {
+   "slug": "ceremonyroomset-up",
+   "title": "Ceremony Room Set-Up",
+   "price": 195,
+   "unit": "",
+   "from": false,
+   "group": "packages",
+   "featured": false,
+   "order": 4,
+   "photos": [
+    "t:products/ceremonyroomset-up-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A beautiful, rustic way to make the ceremony room look and smell lovely.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Each corner of the stage: a large white wooden lantern on a crate, with at least five tall glass vases or hurricane lanterns, all with candles</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Down the aisle: a Mohani lantern or large glass hurricane lamp on a log slice at the end of every other row</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Add-ons</h3>\n<!-- /wp:heading -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Lots of fresh greenery: £80</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Two small milk churns with flower arrangements: £135</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Ivory chair sashes, 20 for £50</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Fairy lights, aisle runners and extra flowers: ask Lucy for prices</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:paragraph -->\n<p>Set up on the morning of your wedding and tailored to you, for example swapping one lantern style for another.</p>\n<!-- /wp:paragraph -->"
+  },
+  {
+   "slug": "riverwindowsetup",
+   "title": "River Window Set-Up",
+   "price": 95,
+   "unit": "",
+   "from": false,
+   "group": "packages",
+   "featured": false,
+   "order": 5,
+   "photos": [
+    "t:products/riverwindowsetup-1.jpg",
+    "t:products/riverwindowsetup-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Let IncaBella dress the alcove in the Mill's river window.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Seasonal potted plants and an olive tree</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Crates and small LOVE letters</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>A large selection of tealights and lanterns</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:paragraph -->\n<p>Set up on the morning of your wedding. Talk to Lucy about which flowers will be in season for your date, or about any colour scheme you have in mind.</p>\n<!-- /wp:paragraph -->"
+  },
+  {
+   "slug": "apple-crate-set-up",
+   "title": "Apple Crate Set-Up",
+   "price": 95,
+   "unit": "",
+   "from": false,
+   "group": "packages",
+   "featured": false,
+   "order": 6,
+   "photos": [
+    "t:products/apple-crate-set-up-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A lovely welcome as your guests arrive.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Five vintage apple crates</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>A selection of lanterns and tealights</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Potted flowers, plants and small posies</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Set up outside or in</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:paragraph -->\n<p>Set up on the morning of your wedding. Talk to Lucy about which flowers will be in season for your date, or about any colour scheme you have in mind.</p>\n<!-- /wp:paragraph -->"
+  },
+  {
+   "slug": "table-centre-piece-package",
+   "title": "Mohani Lantern Table Centre Piece",
+   "price": 25,
+   "unit": "per table",
+   "from": false,
+   "group": "packages",
+   "featured": false,
+   "order": 7,
+   "photos": [
+    "t:products/table-centre-piece-package-1.jpg",
+    "t:products/table-centre-piece-package-2.jpg",
+    "t:products/table-centre-piece-package-3.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A table centre piece that fills the room with warmth.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>An antique brass Mohani lantern with candle on a rustic wood slice</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Fresh greenery</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Five diamond glass tealights</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>A table number holder and card</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:paragraph -->\n<p>Add three small vases of flowers for £15 per table. The lanterns and wood slices can also start the day as aisle ends and move up to the tables, for a small extra cost.</p>\n<!-- /wp:paragraph -->"
+  },
+  {
+   "slug": "table-centre-piece-package-2",
+   "title": "Glass Cylinder Table Centre Piece",
+   "price": 30,
+   "unit": "per table",
+   "from": false,
+   "group": "packages",
+   "featured": false,
+   "order": 8,
+   "photos": [
+    "t:products/table-centre-piece-package-2-1.jpg",
+    "t:products/table-centre-piece-package-2-2.jpg",
+    "t:products/table-centre-piece-package-2-3.jpg",
+    "t:products/table-centre-piece-package-2-4.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>An elegant centre piece that works just as well as an aisle end.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Three glass cylinder vases of different heights, with pillar candles or floating candles</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Fresh greenery</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>A table name or number frame</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:paragraph -->\n<p>On the top table these look lovely set along the front edge. Real or LED candles are both options. The vases can start the day as aisle ends and move up to the tables, for a small extra cost. Chair drapes and other extras are also available.</p>\n<!-- /wp:paragraph -->"
+  },
+  {
+   "slug": "table-centre-piece-long-table",
+   "title": "Long Table Centre Piece",
+   "price": 35,
+   "unit": "per table",
+   "from": false,
+   "group": "packages",
+   "featured": false,
+   "order": 9,
+   "photos": [
+    "t:products/table-centre-piece-long-table-1.jpg",
+    "t:products/table-centre-piece-long-table-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Made for rustic long tables.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>A greenery runner down the middle of the table</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Tall clear glass lanterns and tealights along it</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "ceiling-fairy-lights-ceremony-room",
+   "title": "Ceiling Fairy Lights – Ceremony Room",
+   "price": 125,
+   "unit": "",
+   "from": false,
+   "group": "lights",
+   "featured": false,
+   "order": 10,
+   "photos": [
+    "t:products/ceiling-fairy-lights-ceremony-room-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Warm white fairy lights zig-zagged across the ceremony room ceiling for a soft, romantic glow.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Add the fairy light wall net on the back wall for an extra £100.</p>\n<!-- /wp:paragraph -->"
+  },
+  {
+   "slug": "fairylight-wall-net-ceremony-room",
+   "title": "Fairy Light Wall Net – Ceremony Room",
+   "price": 125,
+   "unit": "",
+   "from": false,
+   "group": "lights",
+   "featured": false,
+   "order": 11,
+   "photos": [
+    "t:products/fairylight-wall-net-ceremony-room-1.jpg",
+    "t:products/fairylight-wall-net-ceremony-room-2.jpg",
+    "t:products/fairylight-wall-net-ceremony-room-3.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>The back wall of the ceremony room covered in warm white fairy lights for a soft, romantic glow.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Add the zig-zag ceiling lights for an extra £100.</p>\n<!-- /wp:paragraph -->"
+  },
+  {
+   "slug": "fairy-light-globes",
+   "title": "Stairwell Fairy Light Globes",
+   "price": 105,
+   "unit": "for six, fitted",
+   "from": false,
+   "group": "lights",
+   "featured": false,
+   "order": 12,
+   "photos": [
+    "t:products/fairy-light-globes-1.jpg",
+    "t:products/fairy-light-globes-2.jpg",
+    "t:products/fairy-light-globes-3.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Six glowing globes hanging down the Mill's stairwell.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>40cm diameter, 240 warm white LEDs each</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Price includes installation</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Single globes for elsewhere in the Mill: £20 each</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "love-light-letters",
+   "title": "LOVE Light-Up Letters",
+   "price": 20,
+   "unit": "",
+   "from": false,
+   "group": "lights",
+   "featured": false,
+   "order": 13,
+   "photos": [
+    "t:products/love-light-letters-1.jpg",
+    "t:products/love-light-letters-2.jpg",
+    "t:products/love-light-letters-3.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Aluminium LOVE letters with built-in twinkly lights.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Each letter about 25cm high and 21cm wide</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Battery powered, batteries included</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Lovely on a windowsill or the top table, or cascading down the step ladder</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>£15 when hired with a garden games package</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Two sets available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "large-heart-light",
+   "title": "Large Heart Light",
+   "price": 30,
+   "unit": "",
+   "from": false,
+   "group": "lights",
+   "featured": false,
+   "order": 14,
+   "photos": [
+    "t:products/large-heart-light-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A handmade steel heart light that looks stunning day or night.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Indoor use only; needs a plug</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Included in the Ground Floor Decoration Package</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>One available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "firepit",
+   "title": "Firepit",
+   "price": 100,
+   "unit": "",
+   "from": false,
+   "group": "outdoor",
+   "featured": false,
+   "order": 15,
+   "photos": [
+    "t:products/firepit-1.jpg",
+    "t:products/firepit-2.jpg",
+    "t:products/firepit-3.jpg",
+    "t:products/firepit-4.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A sculptural firepit ball with an African safari scene hand-cut around it that comes alive when lit. At almost a metre across, it adds drama and warmth outside the Mill and draws guests together.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Hire is for the whole of your wedding or event</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Firewood not included</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "hay-bales",
+   "title": "Hay Bales",
+   "price": 10,
+   "unit": "per bale",
+   "from": false,
+   "group": "outdoor",
+   "featured": false,
+   "order": 16,
+   "photos": [
+    "t:products/hay-bales-1.jpg",
+    "t:products/hay-bales-2.jpg",
+    "t:products/hay-bales-3.jpg",
+    "t:products/hay-bales-4.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Extra outdoor seating at just the right height. Use them as they are for a natural country look, dress them with fabric and cushions, use them at outdoor tables, or stack them into a hay sofa.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:paragraph -->\n<p>Bales go out on the lawn on the morning of your wedding and can stay out overnight. They're cleared away the next morning.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Blankets: 5 for £25 or 10 for £50 (ask Lucy which colours are available)</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Hay Bale Package, £160: 10 bales, blankets, 2 cushions, a table, 2 pots of seasonal flowers and 2 lanterns, set up as hay bale furniture</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "extralargepottedolivetrees",
+   "title": "Large Potted Olive Tree",
+   "price": 30,
+   "unit": "each",
+   "from": false,
+   "group": "outdoor",
+   "featured": false,
+   "order": 17,
+   "photos": [
+    "t:products/extralargepottedolivetrees-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A large olive tree for inside or out. Lovely at the end of the aisle.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Displayed in a large dark grey pot</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>£60 for the pair; two available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "small-potted-olive-trees",
+   "title": "Medium Potted Olive Tree",
+   "price": 15,
+   "unit": "each",
+   "from": false,
+   "group": "outdoor",
+   "featured": false,
+   "order": 18,
+   "photos": [
+    "t:products/small-potted-olive-trees-1.jpg",
+    "t:products/small-potted-olive-trees-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A medium olive tree in a vintage zinc bucket, for inside or out.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>£30 for the pair; two available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "full-set-of-all-8-garden-games",
+   "title": "All Eight Garden Games",
+   "price": 125,
+   "unit": "",
+   "from": false,
+   "group": "games",
+   "featured": false,
+   "order": 19,
+   "photos": [
+    "t:products/full-set-of-all-8-garden-games-1.jpg",
+    "t:products/full-set-of-all-8-garden-games-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>The full set of giant garden games.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Giant chess or giant cornhole (£150 for both)</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Giant Jenga</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Giant Connect 4</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Giant noughts and crosses</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Giant dominoes</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Giant pick-up sticks</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Limbo</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Quoits</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->\n\n<!-- wp:paragraph -->\n<p>Lucy sets the games out at the Mill and collects them early in the evening, usually during the wedding breakfast. Cancel up to 24 hours before for a full refund, so you can wait and see the weather forecast.</p>\n<!-- /wp:paragraph -->"
+  },
+  {
+   "slug": "set-of-4-garden-games",
+   "title": "Four Garden Games with Giant Chess",
+   "price": 100,
+   "unit": "per set",
+   "from": false,
+   "group": "games",
+   "featured": false,
+   "order": 20,
+   "photos": [
+    "t:products/set-of-4-garden-games-1.jpg",
+    "t:products/set-of-4-garden-games-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Giant chess plus three more games of your choice: giant Jenga, giant Connect 4, giant noughts and crosses, giant dominoes, giant pick-up sticks, limbo or quoits.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Delivery and set-up at Sopley Mill included</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Can be hired for other venues if collected from and returned to the Mill, the day before and after where possible</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "set-of-4-garden-games-not-including-giant-chess",
+   "title": "Four Garden Games",
+   "price": 75,
+   "unit": "per set",
+   "from": false,
+   "group": "games",
+   "featured": false,
+   "order": 21,
+   "photos": [
+    "t:products/set-of-4-garden-games-not-including-giant-chess-1.jpg",
+    "t:products/set-of-4-garden-games-not-including-giant-chess-2.jpg",
+    "t:products/set-of-4-garden-games-not-including-giant-chess-3.jpg",
+    "t:products/set-of-4-garden-games-not-including-giant-chess-4.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Any four games except giant chess: giant Jenga, giant Connect 4, giant noughts and crosses, giant dominoes, giant pick-up sticks, limbo or quoits.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Delivery and set-up at Sopley Mill included</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Can be hired for other venues if collected from and returned to the Mill, the day before and after where possible</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "giant-cornhole",
+   "title": "Giant Cornhole",
+   "price": 40,
+   "unit": "",
+   "from": false,
+   "group": "games",
+   "featured": false,
+   "order": 22,
+   "photos": [
+    "t:products/giant-cornhole-1.jpg",
+    "t:products/giant-cornhole-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>An easy, fun game for all ages. Also included in some garden games sets.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Two regulation boards, 120 × 60cm, with a 6-inch hole</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Eight professional cornhole bags</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "kids-play-tent",
+   "title": "Kids' Play Tent",
+   "price": 30,
+   "unit": "",
+   "from": false,
+   "group": "games",
+   "featured": false,
+   "order": 23,
+   "photos": [
+    "t:products/kids-play-tent-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A den for little guests, inside or out. Fits three small children easily, and more at a squash.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Built-in base, ties and a window with a flap</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Two for £50 (the second has a different pattern)</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "wooden-arch",
+   "title": "Wooden Arch",
+   "price": 165,
+   "unit": "",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 24,
+   "photos": [
+    "t:products/wooden-arch-1.jpg",
+    "t:products/wooden-arch-2.jpg",
+    "t:products/wooden-arch-3.jpg",
+    "t:products/wooden-arch-4.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A rustic wooden arch dressed with ivory or white fabric. Beautiful for outdoor ceremonies and can be used inside too.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Add fresh greenery for £75</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Flowers can be added at additional cost</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "cast-iron-red-post-box",
+   "title": "Cast Iron Red Post Box",
+   "price": 40,
+   "unit": "",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 25,
+   "photos": [
+    "t:products/cast-iron-red-post-box-1.jpg",
+    "t:products/cast-iron-red-post-box-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A cast iron ER Royal Mail pillar box: a stylish, secure home for cards and gifts.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Comes with display card and key</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>£35 when booked with any other IncaBella hire</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>One available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "woodenpostbox",
+   "title": "Wooden Post Box",
+   "price": 20,
+   "unit": "",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 26,
+   "photos": [
+    "t:products/woodenpostbox-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A rustic wood and metal post box for cards and gifts. Lovely on a table surrounded by tealights and lanterns.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>One available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "large-vintage-milk-churn",
+   "title": "Large Vintage Milk Churn",
+   "price": 25,
+   "unit": "each",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 27,
+   "photos": [
+    "t:products/large-vintage-milk-churn-1.jpg",
+    "t:products/large-vintage-milk-churn-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A 10-gallon aluminium milk churn. Stunning with a large floral display, at the end of the aisle or either side of a door.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Fill with flowering branches for a less expensive option</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>£45 for two; two available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "medium-vintage-milk-churn",
+   "title": "Medium Vintage Milk Churn",
+   "price": 20,
+   "unit": "each",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 28,
+   "photos": [
+    "t:products/medium-vintage-milk-churn-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>An aluminium milk churn about 50cm tall. Lovely with flowers at the end of the aisle or either side of a door.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Lucy can add a flower display for an extra charge, or fill it yourself with flowering branches</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>£35 for two; two available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "small-vintagemilkchurn",
+   "title": "Small Vintage Milk Churn",
+   "price": 15,
+   "unit": "each",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 29,
+   "photos": [
+    "t:products/small-vintagemilkchurn-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A small milk churn for flowers or potted plants, either side of a door or the aisle.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>£25 for two; two available</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>With a flower arrangement: £80 each or £150 for two</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "vintageapplecrates",
+   "title": "Vintage Apple Crates",
+   "price": 5,
+   "unit": "each",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 30,
+   "photos": [
+    "t:products/vintageapplecrates-1.jpg",
+    "t:products/vintageapplecrates-2.jpg",
+    "t:products/vintageapplecrates-3.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Wooden crates in mixed sizes. Ideal for displaying potted flowers and lanterns, or as side tables with hay bales.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Can be hired with potted flowers; just ask</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Five available, large and small</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "two-vintage-suitcases",
+   "title": "Two Vintage Suitcases",
+   "price": 15,
+   "unit": "for the pair",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 31,
+   "photos": [
+    "t:products/two-vintage-suitcases-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Two dark tan vintage suitcases. Use them as a quirky table or instead of a post box.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>One suitcase: £10</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Suitcases and trunk together: £30</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Also part of the Hay Bale Package</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "vintagetrunk",
+   "title": "Vintage Trunk",
+   "price": 20,
+   "unit": "",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 32,
+   "photos": [
+    "t:products/vintagetrunk-1.jpg",
+    "t:products/vintagetrunk-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A large vintage trunk to use as a quirky table.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Trunk and two suitcases together: £30</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Also part of the Hay Bale Package</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>One available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "wooden-display-step-ladder",
+   "title": "Wooden Display Step Ladder",
+   "price": 20,
+   "unit": "",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 33,
+   "photos": [
+    "t:products/wooden-display-step-ladder-1.jpg",
+    "t:products/wooden-display-step-ladder-2.jpg",
+    "t:products/wooden-display-step-ladder-3.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A wooden step ladder painted in Farrow &amp; Ball, for inside or out. Great for displaying flowers, tealights or cupcakes.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>One available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "displayblackboard",
+   "title": "Rustic Display Blackboard",
+   "price": 15,
+   "unit": "",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 34,
+   "photos": [
+    "t:products/displayblackboard-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A hinged, double-sided blackboard in a vintage khaki-green wooden frame.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>98cm high, 46cm wide</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>One available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "bunting",
+   "title": "Country Bunting",
+   "price": 25,
+   "unit": "25 metres",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 35,
+   "photos": [
+    "t:products/bunting-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>25 metres of cotton English country bunting in checks and stripes on a white line. Lovely strung between the trees across the lawn.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>84 double-sided flags, each 19 × 20cm</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Inside or out</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Ask Lucy if you'd like more than one length</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "10-x-antique-brass-table-numbers",
+   "title": "Antique Brass Table Numbers",
+   "price": 30,
+   "unit": "set of 10",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 36,
+   "photos": [
+    "t:products/10-x-antique-brass-table-numbers-1.jpg",
+    "t:products/10-x-antique-brass-table-numbers-2.jpg",
+    "t:products/10-x-antique-brass-table-numbers-3.jpg",
+    "t:products/10-x-antique-brass-table-numbers-4.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Ten antique brass picture frames with printed inserts: numbers 1–9 and Top Table, or 1–10.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Personalised table names available at extra cost</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Or print your own at 7 × 5 inches</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "log-slices",
+   "title": "Log Slices",
+   "price": 30,
+   "unit": "set of 10",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 37,
+   "photos": [
+    "t:products/log-slices-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Rustic wooden log slices in various sizes, each one slightly different. Ask to see them.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>10 large and 10 small slices: £45</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "round-mirror-plate-table-centre-piece",
+   "title": "Round Mirror Plate",
+   "price": 2.95,
+   "unit": "each",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 38,
+   "photos": [
+    "t:products/round-mirror-plate-table-centre-piece-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A 40cm bevelled round mirror plate. A lovely base for vases, flowers and tealights in the centre of each table.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>10 for £25; ten available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "sweetjars",
+   "title": "Vintage Sweet Jars",
+   "price": 4,
+   "unit": "each",
+   "from": false,
+   "group": "props",
+   "featured": false,
+   "order": 39,
+   "photos": [
+    "t:products/sweetjars-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Glass sweet jars, 30cm tall. Fill each with a different sweet and make your own sweet cart.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>4 for £15; eight available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "tall-glass-dinner-candle-holder",
+   "title": "Tall Glass Dinner Candle Holder",
+   "price": 4,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 40,
+   "photos": [
+    "t:products/tall-glass-dinner-candle-holder-1.jpg",
+    "t:products/tall-glass-dinner-candle-holder-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Tall, elegant dinner candles in an enclosed glass holder, safe for indoor use. Especially lovely along long tables.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>30cm tall, 7cm across</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Ivory dinner candle included</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>The glass gets very hot after a while, so keep out of reach of children</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Packages also available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "rustic-brass-votive",
+   "title": "Rustic Brass Votive",
+   "price": 2.5,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 41,
+   "photos": [
+    "t:products/rustic-brass-votive-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A lattice-effect brass votive, 9.5 × 7.5cm, with tealight.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>10 for £20; twelve available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "sana-storm-lantern-small",
+   "title": "Sana Storm Lantern",
+   "price": 6.95,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 42,
+   "photos": [
+    "t:products/sana-storm-lantern-small-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A grey steel and glass storm lantern, 25 × 15 × 15cm. The enclosed candle means it works inside and out: down the aisle, on tables, or along a terrace or bridge.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Pillar candle included (may be part-used, with plenty of burn time left)</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>6 for £40, 8 for £50; eight available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "swedish-lantern",
+   "title": "Swedish Lantern",
+   "price": 10,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 43,
+   "photos": [
+    "t:products/swedish-lantern-1.jpg",
+    "t:products/swedish-lantern-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>An antique grey metal lantern, 15 × 37cm. The enclosed flame means it's safe indoors.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Pillar candle included (may be part-used, with plenty of burn time left)</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Two available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "silver-lantern",
+   "title": "Silver Lantern",
+   "price": 7.95,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 44,
+   "photos": [
+    "t:products/silver-lantern-1.jpg",
+    "t:products/silver-lantern-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A quality silver lantern, 42 × 15 × 16cm, that gives off a soft, flickering light. Stunning down the aisle, along a bridge or around the terrace on a summer evening.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Pillar candle included (may be part-used, with plenty of burn time left)</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>6 for £45, 8 for £55; eight available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "outdoor-led-hurricane-lantern",
+   "title": "Outdoor LED Hurricane Lantern",
+   "price": 6,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 45,
+   "photos": [
+    "t:products/outdoor-led-hurricane-lantern-1.jpg",
+    "t:products/outdoor-led-hurricane-lantern-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A battery-powered antique grey metal lantern, 19 × 15.5 × 30cm. Lovely on tables, lining a path or hung up.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Batteries included</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>10 for £50; twelve available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "large-white-washed-lantern",
+   "title": "Large White-Washed Lantern",
+   "price": 15,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 46,
+   "photos": [
+    "t:products/large-white-washed-lantern-1.jpg",
+    "t:products/large-white-washed-lantern-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A large white-washed wooden lantern, about 80cm tall. Perfect framing a doorway or the start of the aisle.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Pillar candle included (may be part-used, with plenty of burn time left)</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Also part of the Ceremony Room Set-Up</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>2 for £30; two available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "rope-lantern",
+   "title": "Rope Lantern",
+   "price": 8.95,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 47,
+   "photos": [
+    "t:products/rope-lantern-1.jpg",
+    "t:products/rope-lantern-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A glass lantern with a rope handle, 25 × 18cm. Lovely either side of the entrance, inside or out.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>2 for £15; two available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "gold-rim-glass-t-light-small",
+   "title": "Gold Rim Tealight Holder",
+   "price": 1.5,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 48,
+   "photos": [
+    "t:products/gold-rim-glass-t-light-small-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A glass tealight holder with a gold rim, 7 × 6cm. Elegant dotted along every table.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Tealight included</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>40 for £45; forty available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "hanging-tea-light",
+   "title": "Hanging Tealight Holder",
+   "price": 7.5,
+   "unit": "per 10",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 49,
+   "photos": [
+    "t:products/hanging-tea-light-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Pretty tealight holders with little bells around the rim, made for hanging in trees. Each 6 × 8cm.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Tealights not included</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>20 for £10.50; twenty available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "passu-hanging-tea-light",
+   "title": "Passu Hanging Tealight Holder",
+   "price": 17.5,
+   "unit": "per 10",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 50,
+   "photos": [
+    "t:products/passu-hanging-tea-light-1.jpg",
+    "t:products/passu-hanging-tea-light-2.jpg",
+    "t:products/passu-hanging-tea-light-3.jpg",
+    "t:products/passu-hanging-tea-light-4.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Distressed white hanging tealight holders, 11cm high, that give a beautifully twinkly light in the trees.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Takes a standard tealight</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Sixteen available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "clear-glass-hurricane-vase",
+   "title": "Clear Glass Hurricane Vase",
+   "price": 6,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 51,
+   "photos": [
+    "t:products/clear-glass-hurricane-vase-1.jpg",
+    "t:products/clear-glass-hurricane-vase-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A 27 × 16.5cm hurricane vase with a pillar candle. Use to line the aisle or as a table centre piece, perhaps with pinecones or dried roses around the base.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Candle included (may be part-used)</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>8 for £45, 10 for £55; ten available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "moroccanlantern",
+   "title": "Moroccan Lantern",
+   "price": 15,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 52,
+   "photos": [
+    "t:products/moroccanlantern-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>An antique-finish Moroccan lantern with pale blue markings, about 58cm tall. Beautiful against the Mill's red brick.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Pillar candle included (may be part-used, with plenty of burn time left)</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Two available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "tall-cylinder-glass-vases",
+   "title": "Tall Cylinder Glass Vase",
+   "price": 2.5,
+   "unit": "each",
+   "from": true,
+   "group": "lanterns",
+   "featured": false,
+   "order": 53,
+   "photos": [
+    "t:products/tall-cylinder-glass-vases-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Tall glass vases in various heights, with candles, floating candles or fairy lights inside. Lovely lining the aisle or on tables.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Price depends on size</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Also part of the table centre piece and ceremony room packages</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "ndiki-lantern",
+   "title": "Ndiki Lantern",
+   "price": 17.5,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 54,
+   "photos": [
+    "t:products/ndiki-lantern-1.jpg",
+    "t:products/ndiki-lantern-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A tall antique brass lantern, 41 × 20 × 20cm. The enclosed flame means it's safe indoors.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Pillar candle included (may be part-used, with plenty of burn time left)</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>Two available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "sparkling-silver-t-light-small",
+   "title": "Sparkling Silver Tealight – Small",
+   "price": 10,
+   "unit": "per 10",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 55,
+   "photos": [
+    "t:products/sparkling-silver-t-light-small-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A rustic silver glass tealight holder with a flower pattern that really sparkles. 7cm high; mix and match with the large ones.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Tealights included</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>20 for £18.50, 40 for £35</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>20 small and 20 large together: £40</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "extralargesilverlantern",
+   "title": "Extra Large Silver Lantern",
+   "price": 15,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 56,
+   "photos": [
+    "t:products/extralargesilverlantern-1.jpg",
+    "t:products/extralargesilverlantern-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A very large silver lantern, 59cm tall, with three pillar candles. Perfect framing a doorway or the start of the aisle, perhaps with rose petals around the base.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Candles included (may be part-used, with plenty of burn time left)</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>2 for £30; two available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "hanging-heart-tea-light",
+   "title": "Hanging Heart Tealight Holder",
+   "price": 7.5,
+   "unit": "per 10",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 57,
+   "photos": [
+    "t:products/hanging-heart-tea-light-1.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>Heart-shaped tealight holders for hanging in trees. Each 6 × 8cm.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Tealights not included</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>20 for £10.50; twenty available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "mohani-lantern",
+   "title": "Mohani Lantern",
+   "price": 10.5,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 58,
+   "photos": [
+    "t:products/mohani-lantern-1.jpg",
+    "t:products/mohani-lantern-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>An asymmetric antique brass lantern, 26 × 16cm. A lovely table centre piece, and stunning lining the aisle or dotted around the terrace on a summer evening.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Pillar candle included (may be part-used, with plenty of burn time left)</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>10 for £95; twelve available</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  },
+  {
+   "slug": "sparkling-silver-t-light-large",
+   "title": "Sparkling Silver Tealight – Large",
+   "price": 1.5,
+   "unit": "each",
+   "from": false,
+   "group": "lanterns",
+   "featured": false,
+   "order": 59,
+   "photos": [
+    "t:products/sparkling-silver-t-light-large-1.jpg",
+    "t:products/sparkling-silver-t-light-large-2.jpg"
+   ],
+   "content": "<!-- wp:paragraph -->\n<p>A rustic silver glass tealight holder with a flower pattern that really sparkles. 9cm high; mix and match with the small ones.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\"><!-- wp:list-item -->\n<li>Tealights included</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>10 for £15, 20 for £25, 40 for £40</li>\n<!-- /wp:list-item --><!-- wp:list-item -->\n<li>20 small and 20 large together: £40</li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->"
+  }
+ ]
+}

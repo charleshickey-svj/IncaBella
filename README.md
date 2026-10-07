@@ -29,3 +29,17 @@ New photos go in `assets/img/products/`. To make web-sized copies from the origi
 - **Form emails.** The list request and contact forms show a confirmation but don't send anything yet.
   Connect them to a form service (e.g. Netlify Forms or Formspree) to email Lucy@incabella.co.uk.
 - **Hosting.** Move `incabella.co.uk` to a static host (e.g. Netlify or Cloudflare Pages).
+
+## WordPress theme
+
+`wordpress-theme/incabella/` is the same site as an installable WordPress theme (no plugins needed).
+Build the zip from the `wordpress-theme` folder:
+
+```
+cd wordpress-theme && zip -qr ../dist/incabella-theme.zip incabella
+```
+
+- Hire items, prices and photos: the **Hire items** menu in the dashboard.
+- Page photos, contact details and reviews: **Appearance → Customise → IncaBella**.
+- Enquiry form: emails Lucy and saves a copy under **Enquiries**.
+- Lucy's how-to guide: `wordpress-theme/docs/lucy-guide.html` (printed to PDF).
