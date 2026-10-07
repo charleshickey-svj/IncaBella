@@ -79,7 +79,13 @@ function ib_run_setup() {
 		wp_die( 'Only an administrator can run the setup.' );
 	}
 	check_admin_referer( 'ib_setup' );
+	ib_do_setup();
+	wp_safe_redirect( admin_url( 'edit.php?post_type=ib_product&ib_setup=done' ) );
+	exit;
+}
 
+/** Create the pages, set the front page and load the hire items. Safe to run more than once. */
+function ib_do_setup() {
 	foreach ( ib_site_pages() as $slug => $title ) {
 		$page = get_page_by_path( $slug );
 		if ( ! $page ) {
@@ -103,8 +109,6 @@ function ib_run_setup() {
 	ib_import_products();
 	update_option( 'ib_setup_done', 1 );
 	flush_rewrite_rules();
-	wp_safe_redirect( admin_url( 'edit.php?post_type=ib_product&ib_setup=done' ) );
-	exit;
 }
 
 /** Load the hire items bundled with the theme. Items that already exist (same web name) are left alone. */
