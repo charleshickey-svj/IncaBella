@@ -94,8 +94,10 @@ ob_start();
     document.addEventListener("listchange", render);
     render();
 
+    var sending = false;
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      if (sending) return;
       var ls = lines();
       var missing = [].slice.call(form.querySelectorAll("[required]")).filter(function (f) { return !f.value.trim() || !f.checkValidity(); });
       form.querySelectorAll("[aria-invalid]").forEach(function (f) { f.removeAttribute("aria-invalid"); });
@@ -109,16 +111,30 @@ ob_start();
         error.hidden = false; missing[0].focus(); return;
       }
       error.hidden = true;
+      sending = true;
+      var data = new FormData(form);
+      data.append("action", "ib_enquiry");
+      data.append("type", "list");
+      data.append("items", JSON.stringify(IB.List.items()));
+      fetch(<?php echo wp_json_encode( admin_url( 'admin-ajax.php' ) ); ?>, { method: "POST", body: data, credentials: "same-origin" })
+        .then(function (r) { return r.json(); })
+        .then(function (res) { if (!res || !res.success) throw new Error("not sent"); showSent(ls); })
+        .catch(function () {
+          error.textContent = "Sorry, your list didn't send. Please try again, or email it to " + IB.contact.email + ".";
+          error.hidden = false;
+        })
+        .then(function () { sending = false; });
+    });
+    function showSent(ls) {
       var date = new Date(form.date.value + "T12:00:00").toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
       success.innerHTML = '<p class="script" style="font-size:3.2rem">Thank you</p>' +
         "<h2>Lucy has your list</h2>" +
         "<p>She'll check availability for " + IB.esc(date) + " and reply to " + IB.esc(form.email.value) + " within two working days.</p>" +
         "<ul>" + ls.map(function (l) { return "<li>" + l.qty + " × " + IB.esc(l.p.name) + "</li>"; }).join("") +
         (form.flowers.checked ? "<li>A chat about flowers</li>" : "") + "</ul>" +
-        '<p class="demo-flag">Demo preview: in the finished site this request is emailed to ' + IB.contact.email + ".</p>" +
         '<p><button class="btn btn--small" type="button" data-new>Start a new list</button></p>';
       form.hidden = true; success.hidden = false; success.focus();
-    });
+    }
     success.addEventListener("click", function (e) {
       if (!e.target.closest("[data-new]")) return;
       IB.List.clear(); form.reset(); form.hidden = false; success.hidden = true;

@@ -11,6 +11,7 @@ add_action(
 		add_menu_page( 'Hire prices & photos', 'IncaBella', 'edit_theme_options', 'incabella', 'ib_products_screen', 'dashicons-store', 3 );
 		add_submenu_page( 'incabella', 'Hire prices & photos', 'Hire prices & photos', 'edit_theme_options', 'incabella', 'ib_products_screen' );
 		add_submenu_page( 'incabella', 'Hero photos', 'Hero photos', 'edit_theme_options', 'incabella-photos', 'ib_photos_screen' );
+		add_submenu_page( 'incabella', 'Enquiry email', 'Enquiry email', 'edit_theme_options', 'incabella-email', 'ib_email_screen' );
 	}
 );
 
@@ -248,6 +249,43 @@ add_action(
 
 		update_option( 'ib_photo_edits', $edits, true );
 		wp_safe_redirect( admin_url( 'admin.php?page=incabella-photos&saved=1' ) );
+		exit;
+	}
+);
+
+/* ---------- Enquiry email ---------- */
+
+function ib_email_screen() {
+	?>
+	<div class="wrap ib-admin">
+		<h1>Enquiry email</h1>
+		<?php ib_admin_notice(); ?>
+		<p class="ib-intro">When someone sends their wedding list or a message from the Contact page, it's emailed to this address. Press <strong>Reply</strong> on the email to answer them directly. Every enquiry is also kept under <strong>IncaBella → Enquiries</strong>.</p>
+		<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+			<input type="hidden" name="action" value="ib_save_email">
+			<?php wp_nonce_field( 'ib_save_email' ); ?>
+			<p>
+				<label for="ib-email"><strong>Send enquiries to</strong></label><br>
+				<input type="email" class="regular-text" id="ib-email" name="ib_enquiry_email" value="<?php echo esc_attr( ib_enquiry_email() ); ?>" required>
+			</p>
+			<?php submit_button( 'Save changes', 'primary' ); ?>
+		</form>
+	</div>
+	<?php
+}
+
+add_action(
+	'admin_post_ib_save_email',
+	function () {
+		if ( ! current_user_can( 'edit_theme_options' ) ) {
+			wp_die( 'Sorry, you are not allowed to do that.' );
+		}
+		check_admin_referer( 'ib_save_email' );
+		$email = isset( $_POST['ib_enquiry_email'] ) ? sanitize_email( wp_unslash( $_POST['ib_enquiry_email'] ) ) : '';
+		if ( is_email( $email ) ) {
+			update_option( 'ib_enquiry_email', $email );
+		}
+		wp_safe_redirect( admin_url( 'admin.php?page=incabella-email&saved=1' ) );
 		exit;
 	}
 );

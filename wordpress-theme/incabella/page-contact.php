@@ -108,8 +108,10 @@ ob_start();
     window.addEventListener("hashchange", pickTopic);
     document.querySelector("[data-topic]").addEventListener("click", function () { form.topic.value = "Flowers"; });
 
+    var sending = false;
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      if (sending) return;
       form.querySelectorAll("[aria-invalid]").forEach(function (f) { f.removeAttribute("aria-invalid"); });
       var missing = [].slice.call(form.querySelectorAll("[required]")).filter(function (f) { return !f.value.trim() || !f.checkValidity(); });
       if (missing.length) {
@@ -118,10 +120,23 @@ ob_start();
         error.hidden = false; missing[0].focus(); return;
       }
       error.hidden = true;
-      success.innerHTML = '<p class="script" style="font-size:3.2rem">Thank you</p><h2>Message sent</h2>' +
-        "<p>Lucy will reply to " + IB.esc(form.email.value) + " as soon as she can, usually within two working days.</p>" +
-        '<p class="demo-flag">Demo preview: in the finished site this message is emailed to ' + IB.contact.email + ".</p>";
-      form.hidden = true; success.hidden = false; success.focus();
+      sending = true;
+      var data = new FormData(form);
+      data.append("action", "ib_enquiry");
+      data.append("type", "contact");
+      fetch(<?php echo wp_json_encode( admin_url( 'admin-ajax.php' ) ); ?>, { method: "POST", body: data, credentials: "same-origin" })
+        .then(function (r) { return r.json(); })
+        .then(function (res) {
+          if (!res || !res.success) throw new Error("not sent");
+          success.innerHTML = '<p class="script" style="font-size:3.2rem">Thank you</p><h2>Message sent</h2>' +
+            "<p>Lucy will reply to " + IB.esc(form.email.value) + " as soon as she can, usually within two working days.</p>";
+          form.hidden = true; success.hidden = false; success.focus();
+        })
+        .catch(function () {
+          error.textContent = "Sorry, your message didn't send. Please try again, or email " + IB.contact.email + ".";
+          error.hidden = false;
+        })
+        .then(function () { sending = false; });
     });
   })();
 </script>

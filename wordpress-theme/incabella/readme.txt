@@ -40,6 +40,8 @@ Dashboard > IncaBella:
 
 * Hire prices & photos: price, description and photos for each hire item.
 * Hero photos: the four home page slideshow photos and the top photos on About, Flowers and Hire.
+* Enquiry email: where list and contact form enquiries are sent.
+* Enquiries: a copy of every enquiry.
 
 Changes are stored in the options ib_product_edits and ib_photo_edits and applied on top of
 products.js in the page, so anything not edited stays exactly as it was. Uploaded photos are
@@ -47,7 +49,10 @@ served at the same sizes as the site's own photos (1200px for hire items, 2000px
 
 == Notes ==
 
-* The contact form and the "Send my list" form behave as on the original site: they show a
-  confirmation but do not send email yet.
+* The "Send my list" and contact forms post to admin-ajax.php (action ib_enquiry). Each enquiry
+  is emailed with wp_mail() to the address under IncaBella > Enquiry email (default
+  Lucy@incabella.co.uk), with Reply-To set to the sender, and saved as a private "Enquiries"
+  post. Prices in the email come from the server, including dashboard changes. For reliable
+  delivery, send WordPress mail through SMTP (e.g. the WP Mail SMTP plugin).
 * Don't let a caching or speed plugin combine, defer or delay the theme's JavaScript; the
   scripts must run in their original order at the end of the page.

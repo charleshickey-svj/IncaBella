@@ -47,6 +47,13 @@ The first photo is the main one. It's the one shown on the Hire page.
 
 Wide (landscape) photos look best here. **Put the original photo back** returns the original.
 
+## Wedding lists and messages from the website
+
+When a couple sends their wedding list, or someone uses the Contact page, it's emailed to you. The email shows their details, the items they chose, the prices and an estimated total. Press **Reply** and your answer goes straight to them.
+
+- **Change the address it goes to:** click **IncaBella**, then **Enquiry email**, type the new address and click **Save changes**.
+- **See every enquiry:** click **IncaBella**, then **Enquiries**. Every one is kept here, even if an email goes missing. If an email failed to send, it says **No, the email failed** next to it.
+
 ## Good to know
 
 - **Photos are trimmed to fit.** The site crops each photo to the same shape as before, so keep the important part near the middle.
