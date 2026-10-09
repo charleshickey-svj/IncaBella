@@ -1,0 +1,129 @@
+<?php
+/**
+ * Contact (originally contact.html).
+ */
+
+get_header();
+?>
+
+<main>
+  <header class="plain-head wrap">
+    <h1>Contact us</h1>
+    <hr class="rule">
+    <div class="btn-row">
+      <a class="btn" href="hire.html">Browse hire</a>
+      <a class="btn" href="list.html">Send my list</a>
+      <a class="btn" href="#flowers" data-topic="Flowers">Ask about flowers</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap" style="display:grid;gap:clamp(56px,7vw,96px)">
+      <div class="narrow" style="margin-inline:auto;width:100%;display:grid;gap:28px" id="flowers">
+        <p class="lede reveal" style="text-align:center;margin-inline:auto">Ask Lucy anything about flowers or hire, or check availability for your date. You're welcome to see any of the hire items at Sopley Mill before you commit, by arrangement.</p>
+        <form class="form-card reveal" id="contact-form" novalidate>
+          <div class="fields">
+            <div class="field"><label for="c-name">Your name</label><input id="c-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="c-phone">Phone</label><input id="c-phone" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="c-date">Wedding date</label><input id="c-date" name="date" type="date"><span class="hint">If you know it</span></div>
+            <div class="field field--full"><label for="c-topic">What's it about?</label>
+              <select id="c-topic" name="topic"><option>Hire items</option><option>Flowers</option><option>A decoration package</option><option>Visiting to see the hire items</option><option>Something else</option></select></div>
+            <div class="field field--full"><label for="c-message">Message</label><textarea id="c-message" name="message" required></textarea></div>
+          </div>
+          <p class="error-msg" data-error hidden></p>
+          <button class="btn" type="submit">Send message</button>
+        </form>
+        <div class="success" data-success hidden tabindex="-1"></div>
+      </div>
+
+      <div class="find-us reveal" id="find-us">
+        <a class="map" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sopley+Mill%2C+Mill+Lane%2C+Sopley%2C+Christchurch+BH23+7AU" target="_blank" rel="noopener" aria-label="Get directions to Sopley Mill in Google Maps">
+          <svg viewBox="90 0 420 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="600" height="420" fill="#eef0e6"/>
+            <g fill="#e2e6d6">
+              <path d="M0 0h170l-20 140-150 30z"/><path d="M420 0h180v150l-160 20z"/><path d="M0 250l140-20 20 190H0z"/><path d="M450 260l150-30v190H470z"/>
+            </g>
+            <g fill="#d5dcc4"><circle cx="455" cy="95" r="26"/><circle cx="485" cy="120" r="18"/><circle cx="70" cy="320" r="22"/><circle cx="98" cy="345" r="15"/><circle cx="520" cy="320" r="20"/></g>
+            <rect x="150" y="214" width="92" height="12" rx="3" transform="rotate(-20 196 220)" fill="#d9dccf"/>
+            <path d="M262 -10 C 240 60, 300 110, 282 170 S 300 250, 322 300 S 300 380, 330 430" fill="none" stroke="#bfd0d3" stroke-width="12" stroke-linecap="round"/>
+            <path d="M120 -10 C 140 90, 110 220, 140 430" fill="none" stroke="#fff" stroke-width="7"/>
+            <path d="M120 -10 C 140 90, 110 220, 140 430" fill="none" stroke="#d6d2c4" stroke-width="1"/>
+            <path d="M410 -10 C 380 90, 340 150, 345 215 S 380 330, 372 430" fill="none" stroke="#fff" stroke-width="7"/>
+            <path d="M-10 392 C 150 380, 420 400, 610 378" fill="none" stroke="#fff" stroke-width="9"/>
+            <path d="M345 205 C 330 205, 312 200, 298 196" fill="none" stroke="#fff" stroke-width="4"/>
+            <g font-family="Figtree, sans-serif" font-size="11" letter-spacing="2.5" fill="#7d7c72">
+              <text x="352" y="34">RINGWOOD ↑</text>
+              <text x="352" y="366">CHRISTCHURCH ↓</text>
+              <text x="150" y="250">BOURNEMOUTH</text><text x="150" y="266">AIRPORT</text>
+              <text x="236" y="80" transform="rotate(-72 236 80)" fill="#8fa5aa">RIVER AVON</text>
+              <text x="100" y="330" font-size="10">A338</text>
+              <text x="386" y="120" font-size="10">B3347</text>
+              <text x="210" y="410" font-size="10">A35</text>
+            </g>
+            <circle class="pulse" cx="298" cy="196" r="14" fill="#b4847f"/>
+            <g class="pin">
+              <path d="M298 196c-14-18-22-29-22-41a22 22 0 0 1 44 0c0 12-8 23-22 41z" fill="#7a7f55"/>
+              <circle cx="298" cy="154" r="8.5" fill="#fff"/><circle cx="298" cy="154" r="4" fill="#b4847f"/>
+            </g>
+            <text x="330" y="160" font-family="'Gilda Display', Georgia, serif" font-size="24" fill="#3d3c38">Sopley Mill</text>
+            <text x="331" y="180" font-family="Figtree, sans-serif" font-size="11" letter-spacing="2" fill="#7d7c72">MILL LANE · BH23 7AU</text>
+          </svg>
+          <span class="map-cta">Open in Google Maps <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></span>
+        </a>
+        <div class="find-us-info">
+          <h2>Find us at the Mill</h2>
+          <div><h3>Address</h3><address>Sopley Mill, Mill Lane,<br>Nr Christchurch,<br>Dorset, BH23 7AU</address></div>
+          <div><h3>Contact</h3><p><a href="mailto:Lucy@incabella.co.uk">Lucy@incabella.co.uk</a><br><a href="tel:+447946471707">07946 471707</a></p></div>
+          <div><h3>Visits</h3><p>See the hire collection at Sopley Mill by appointment.</p></div>
+          <div><h3>Follow IncaBella</h3><div data-social></div></div>
+          <p><a class="btn btn--small" href="https://www.google.com/maps/dir/?api=1&amp;destination=Sopley+Mill%2C+Mill+Lane%2C+Sopley%2C+Christchurch+BH23+7AU" target="_blank" rel="noopener">Get directions</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<?php
+ob_start();
+?>
+<script>
+  (function () {
+    document.querySelector("[data-social]").innerHTML = IB.socialLinks();
+
+    // On the live site, swap the drawn map for the real Google map.
+    // (The private Claude preview blocks Google Maps, so it keeps the drawn one.)
+    if (!/claude/i.test(location.hostname)) {
+      var drawn = document.querySelector(".map");
+      var live = document.createElement("div");
+      live.className = "map map--live";
+      live.innerHTML = '<iframe title="Map showing Sopley Mill, Mill Lane, Christchurch BH23 7AU" src="https://www.google.com/maps?q=Sopley+Mill,+Mill+Lane,+Sopley,+Christchurch+BH23+7AU&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>';
+      drawn.replaceWith(live);
+    }
+    var form = document.getElementById("contact-form");
+    var error = document.querySelector("[data-error]");
+    var success = document.querySelector("[data-success]");
+    function pickTopic() { if (location.hash === "#flowers") form.topic.value = "Flowers"; }
+    pickTopic();
+    window.addEventListener("hashchange", pickTopic);
+    document.querySelector("[data-topic]").addEventListener("click", function () { form.topic.value = "Flowers"; });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      form.querySelectorAll("[aria-invalid]").forEach(function (f) { f.removeAttribute("aria-invalid"); });
+      var missing = [].slice.call(form.querySelectorAll("[required]")).filter(function (f) { return !f.value.trim() || !f.checkValidity(); });
+      if (missing.length) {
+        missing.forEach(function (f) { f.setAttribute("aria-invalid", "true"); });
+        error.textContent = "Please fill in " + missing.map(function (f) { return form.querySelector('label[for="' + f.id + '"]').textContent.toLowerCase(); }).join(", ") + ".";
+        error.hidden = false; missing[0].focus(); return;
+      }
+      error.hidden = true;
+      success.innerHTML = '<p class="script" style="font-size:3.2rem">Thank you</p><h2>Message sent</h2>' +
+        "<p>Lucy will reply to " + IB.esc(form.email.value) + " as soon as she can, usually within two working days.</p>" +
+        '<p class="demo-flag">Demo preview: in the finished site this message is emailed to ' + IB.contact.email + ".</p>";
+      form.hidden = true; success.hidden = false; success.focus();
+    });
+  })();
+</script>
+<?php
+get_footer( null, array( 'script' => ob_get_clean() ) );

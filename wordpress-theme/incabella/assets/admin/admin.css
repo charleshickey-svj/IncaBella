@@ -1,0 +1,24 @@
+/* IncaBella dashboard screens. */
+.ib-admin { max-width: 960px; }
+.ib-admin .ib-intro { font-size: 14px; max-width: 46em; }
+.ib-group { margin-top: 28px; }
+.ib-item { background: #fff; border: 1px solid #dcdcde; border-radius: 4px; margin-bottom: 8px; }
+.ib-item summary { display: flex; align-items: center; gap: 14px; padding: 8px 14px; cursor: pointer; }
+.ib-item summary img { width: 56px; height: 56px; object-fit: cover; border-radius: 3px; flex: none; }
+.ib-item .ib-name { font-size: 14px; font-weight: 600; flex: 1; }
+.ib-item .ib-price { color: #50575e; }
+.ib-item[open] summary { border-bottom: 1px solid #dcdcde; }
+.ib-fields { padding: 4px 18px 18px; }
+.ib-fields .description { display: block; margin-top: 4px; }
+.ib-photos ul { display: flex; flex-wrap: wrap; gap: 14px; margin: 10px 0; }
+.ib-photos li { display: grid; gap: 4px; justify-items: start; margin: 0; }
+.ib-photos li img { width: 140px; height: 140px; object-fit: cover; border-radius: 3px; background: #f0f0f1; }
+.ib-photos li .button-link { font-size: 13px; }
+.ib-photos .ib-remove { color: #b32d2e; }
+.ib-hero-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px; }
+.ib-hero { background: #fff; border: 1px solid #dcdcde; border-radius: 4px; padding: 4px 16px 10px; }
+.ib-hero h2 { font-size: 14px; }
+.ib-photos--single li img { width: 100%; height: 160px; }
+.ib-photos--single li { justify-items: stretch; width: 100%; }
+.ib-photos--single ul { display: block; }
+.ib-save { position: sticky; bottom: 0; background: #f0f0f1; padding: 14px 0; margin: 0; border-top: 1px solid #dcdcde; }

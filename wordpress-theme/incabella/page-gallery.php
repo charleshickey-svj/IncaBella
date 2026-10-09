@@ -1,0 +1,68 @@
+<?php
+/**
+ * Gallery (originally gallery.html).
+ */
+
+get_header();
+?>
+
+<main>
+  <header class="plain-head wrap">
+    <p class="script">Gallery</p>
+    <h1 class="visually-hidden">Gallery</h1>
+    <hr class="rule">
+    <p class="lede" style="margin-inline:auto">Real weddings at Sopley Mill, styled by IncaBella.</p>
+  </header>
+  <section class="section" style="padding-top:clamp(48px,6vw,80px)">
+    <div class="wrap"><div class="masonry" data-gallery></div></div>
+  </section>
+</main>
+
+<?php
+ob_start();
+?>
+<script>
+  (function () {
+    var site = ["wildflower-bouquet", "crate-display-mill", "delphinium-bouquet", "jars-on-bench", "riverside-bouquet", "potted-aisle", "nigella-closeup", "white-daisy-vase", "potted-violas-thyme", "hero", "ceremony", "bouquets", "long-table", "arch", "chess", "centrepiece", "river-window", "games", "crates", "vase-pink", "firepit-night", "jenga", "churn-flowers", "potted-aisle", "ladder-toss"]
+      .map(function (n) { return { src: <?php echo wp_json_encode( ib_site_img( '' ) ); ?> + n + ".jpg", alt: "" }; });
+    var picks = ["fairy-light-globes", "love-light-letters", "wooden-arch", "outdoor-ceremony-set-up", "table-centre-piece-package-2", "large-heart-light", "hay-bales", "mohani-lantern", "passu-hanging-tea-light", "fairylight-wall-net-ceremony-room", "kids-play-tent", "ground-floor-decoration-package"]
+      .map(function (s) { var p = IB.product(s); return { src: IB.img(p), alt: p.name, slug: s }; });
+    var photos = [];
+    site.forEach(function (s, i) { photos.push(s); if (picks[i]) photos.push(picks[i]); });
+
+    var box = document.querySelector("[data-gallery]");
+    box.innerHTML = photos.map(function (ph, i) {
+      return '<button type="button" class="reveal" data-i="' + i + '" aria-label="Open photo ' + (i + 1) + '"><img src="' + ph.src + '" alt="' + IB.esc(ph.alt) + '" loading="lazy"></button>';
+    }).join("");
+
+    var lb, current = 0, opener;
+    function open(i) {
+      current = (i + photos.length) % photos.length;
+      if (!lb) {
+        lb = document.createElement("div");
+        lb.className = "lightbox"; lb.setAttribute("role", "dialog"); lb.setAttribute("aria-modal", "true"); lb.setAttribute("aria-label", "Photo viewer");
+        lb.innerHTML = '<img alt=""><button class="prev" type="button" aria-label="Previous photo">‹</button><button class="next" type="button" aria-label="Next photo">›</button><button class="close" type="button" aria-label="Close">×</button>';
+        lb.addEventListener("click", function (e) {
+          if (e.target.closest(".prev")) open(current - 1);
+          else if (e.target.closest(".next")) open(current + 1);
+          else if (e.target.closest(".close") || e.target === lb) close();
+        });
+        document.body.appendChild(lb);
+      }
+      lb.hidden = false;
+      lb.querySelector("img").src = photos[current].src;
+      lb.querySelector("img").alt = photos[current].alt;
+      lb.querySelector(".close").focus();
+    }
+    function close() { lb.hidden = true; if (opener) opener.focus(); }
+    box.addEventListener("click", function (e) { var b = e.target.closest("[data-i]"); if (b) { opener = b; open(+b.dataset.i); } });
+    document.addEventListener("keydown", function (e) {
+      if (!lb || lb.hidden) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") open(current - 1);
+      if (e.key === "ArrowRight") open(current + 1);
+    });
+  })();
+</script>
+<?php
+get_footer( null, array( 'script' => ob_get_clean() ) );
