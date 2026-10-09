@@ -1,0 +1,24 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "landingPage": "/",
+  "preferredVersions": { "php": "8.2", "wp": "latest" },
+  "login": true,
+  "steps": [
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "url",
+        "url": "https://raw.githubusercontent.com/charleshickey-svj/IncaBella/refs/heads/claude/laughing-wozniak-0w2n9m/dist/incabella-theme.zip"
+      },
+      "options": { "activate": true }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": { "blogname": "IncaBella", "permalink_structure": "/%postname%/" }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require_once '/wordpress/wp-load.php'; flush_rewrite_rules();"
+    }
+  ]
+}
